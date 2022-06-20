@@ -21,10 +21,6 @@
       <Tick7>
         <Note>
           <Type>Melody</Type>
-          <Number>63</Number>
-        </Note>
-        <Note>
-          <Type>Melody</Type>
           <Number>70</Number>
         </Note>
       </Tick7>
@@ -51,10 +47,6 @@
         </Note>
       </Tick13>
       <Tick15>
-        <Note>
-          <Type>Melody</Type>
-          <Number>63</Number>
-        </Note>
         <Note>
           <Type>Melody</Type>
           <Number>70</Number>

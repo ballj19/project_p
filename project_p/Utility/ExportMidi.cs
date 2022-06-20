@@ -30,12 +30,13 @@ namespace project_p
             result = result.AdjustTempo((double)player.bpm);
 
 
-            using (var stm = File.OpenWrite(@"C:\Users\jakeb\Downloads\Landslide_test.mid"))
+            using (var stm = File.OpenWrite(@"C:\Users\jakeb\Downloads\song.mid"))
             {
                 stm.SetLength(0);
                 result.WriteTo(stm);
             }
 
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", @"C:\Users\jakeb\Downloads\song.mid");
         }
 
         private M.MidiFile RemoveEvents(M.MidiFile result)
@@ -97,6 +98,12 @@ namespace project_p
             foreach (XmlNode b in bars)
             {
                 int bar_number = int.Parse(b.Name.Substring(3));
+
+                if (bar_number < int.Parse(ExportStart.Text) || bar_number > int.Parse(ExportEnd.Text))
+                {
+                    prev_note_tick += 16;
+                    continue;
+                }
 
                 for (int tick = 1; tick <= 16; tick++)
                 {
