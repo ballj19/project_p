@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Song>
+  <Bars>
+    <Bar1>
+      <Tick16>
+        <Note>
+          <Type>Melody</Type>
+          <Number>67</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>69</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>74</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>76</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>77</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>79</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>81</Number>
+        </Note>
+      </Tick16>
+    </Bar1>
+  </Bars>
+</Song>

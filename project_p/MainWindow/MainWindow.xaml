@@ -1,0 +1,59 @@
+﻿<Window x:Class="project_p.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project_p"
+        mc:Ignorable="d"
+        Title="Project P" Height="800" Width="1500">
+    <Grid>
+        <ScrollViewer HorizontalAlignment="Left" Margin="0,130,0,45" Width="1000">
+            <StackPanel x:Name="Timeline" Orientation="Vertical">
+            </StackPanel>
+        </ScrollViewer>
+        <GroupBox Header="Global" HorizontalAlignment="Right" Height="100" Margin="0,53,20,0" VerticalAlignment="Top" Width="450">
+            <Grid>
+                <Button x:Name="ModulateButton" Content="Modulate" HorizontalAlignment="Left" Margin="60,0,0,20" VerticalAlignment="Bottom" Width="58" Click="ModulateButton_Click"/>
+                <TextBox x:Name="ModulateAmount" HorizontalAlignment="Left" Height="23" Margin="20,0,0,20" TextWrapping="Wrap" Text="0" VerticalAlignment="Bottom" Width="30"/>
+                <Button x:Name="RevisionButton" Content="Revision" HorizontalAlignment="Right" Margin="0,0,250,20" VerticalAlignment="Bottom" Width="50" Click="RevisionButton_Click"/>
+                <Button x:Name="ImportFileButton" Content="Import File" HorizontalAlignment="Right" Margin="0,0,160,20" VerticalAlignment="Bottom" Width="75" Click="ImportFileButton_Click"/>
+                <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Right" Margin="0,0,40,20" VerticalAlignment="Bottom" Width="50" Click="SaveButton_Click"/>
+                <Button x:Name="ExportMidi" Content="Export" HorizontalAlignment="Right" Margin="0,0,100,20" VerticalAlignment="Bottom" Width="50" Click="ExportMidi_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Bar" HorizontalAlignment="Right" Height="100" Margin="0,20,707,0" VerticalAlignment="Top" Width="450">
+            <Grid>
+                <Button x:Name="PrevBar" Content="-" HorizontalAlignment="Center" Margin="161,7,257,0" VerticalAlignment="Top" Width="20" Click="PrevBar_Click"/>
+                <TextBox x:Name="BarNumber" Text="1" HorizontalAlignment="Center"  Margin="195,7,220,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="23"/>
+                <Button x:Name="NextBar" Content="+" HorizontalAlignment="Center" Margin="231,7,187,0" VerticalAlignment="Top" Width="20" Click="NextBar_Click"/>
+                <Button x:Name="AddTickButton" Content="AddTick" HorizontalAlignment="Right" Margin="0,0,211,17" VerticalAlignment="Bottom" Width="50" Click="AddTickButton_Click"/>
+                <Button x:Name="InsertBar" Content="Insert Bar" HorizontalAlignment="Right" Margin="0,0,75,47" VerticalAlignment="Bottom" Width="69" Click="InsertBarButton_Click"/>
+                <Button x:Name="DeleteBar" Content="Delete Bar" HorizontalAlignment="Right" Margin="0,0,75,16" VerticalAlignment="Bottom" Width="69" Click="DeleteBarButton_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Bass Builder" HorizontalAlignment="Right" Height="224" Margin="0,300,20,0" VerticalAlignment="Top" Width="450">
+            <Grid>
+                <Button x:Name="RunButton" Content="Run" HorizontalAlignment="Right" Margin="0,0,20,20" VerticalAlignment="Bottom" Width="50" Click="RunButton_Click"/>
+                <Label Content="Chord" HorizontalAlignment="Left" Margin="45,15,0,0" VerticalAlignment="Top" Width="50"/>
+                <ComboBox x:Name="ChordName" HorizontalAlignment="Left" Margin="20,40,0,0" VerticalAlignment="Top" Width="90"/>
+                <Label Content="Octave" HorizontalAlignment="Left" Margin="140,15,0,0" VerticalAlignment="Top" Width="50"/>
+                <ComboBox x:Name="OctaveStart" HorizontalAlignment="Left" Margin="120,40,0,0" VerticalAlignment="Top" Width="90"/>
+                <Label Content="Inversion" HorizontalAlignment="Left" Margin="221,15,0,0" VerticalAlignment="Top" Width="60"/>
+                <ComboBox x:Name="Inversion" HorizontalAlignment="Left" Margin="220,40,0,0" VerticalAlignment="Top" Width="70"/>
+                <Label Content="Activations" HorizontalAlignment="Left" Margin="297,15,0,0" VerticalAlignment="Top" Width="70"/>
+                <ComboBox x:Name="Activations" HorizontalAlignment="Left" Margin="300,40,0,0" VerticalAlignment="Top" Width="70"/>
+                <Label Content="Pattern" HorizontalAlignment="Left" Margin="20,75,0,0" VerticalAlignment="Top" Width="70"/>
+                <ComboBox x:Name="Pattern" HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top" Width="200"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Play Control" HorizontalAlignment="Right" Height="100" Margin="0,20,495,0" VerticalAlignment="Top" Width="204">
+            <Grid>
+                <TextBox x:Name="BarStart" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Margin="11,7,0,0" Width="30"/>
+                <TextBox x:Name="BarEnd" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="30" Margin="62,7,0,0"/>
+                <Button x:Name="PlayBarButton" Content="Play Bar" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="50" Click="PlayBarButton_Click"/>
+                <Button x:Name="PlayButton" Content="Play" HorizontalAlignment="Left" Margin="61,0,0,10" VerticalAlignment="Bottom" Width="50" Click="PlayButton_Click"/>
+                <Button x:Name="StopButton" Content="Stop" HorizontalAlignment="Left" Margin="120,47,0,0" VerticalAlignment="Top" Width="50" Click="StopButton_Click"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
