@@ -1,7 +1,0 @@
-C:\Users\jakeb\source\repos\project_p\Midi\bin\Debug\Midi.xml
-C:\Users\jakeb\source\repos\project_p\Midi\bin\Debug\Midi.dll
-C:\Users\jakeb\source\repos\project_p\Midi\bin\Debug\Midi.pdb
-C:\Users\jakeb\source\repos\project_p\Midi\obj\Debug\Midi.csprojAssemblyReference.cache
-C:\Users\jakeb\source\repos\project_p\Midi\obj\Debug\Midi.csproj.CoreCompileInputs.cache
-C:\Users\jakeb\source\repos\project_p\Midi\obj\Debug\Midi.dll
-C:\Users\jakeb\source\repos\project_p\Midi\obj\Debug\Midi.pdb
