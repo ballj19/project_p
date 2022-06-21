@@ -1370,6 +1370,12 @@
           <Number>48</Number>
         </Note>
       </Tick1>
+      <Tick3>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+      </Tick3>
       <Tick5>
         <Note>
           <Type>Melody</Type>
@@ -1380,6 +1386,24 @@
           <Number>74</Number>
         </Note>
       </Tick5>
+      <Tick7>
+        <Note>
+          <Type>Bass</Type>
+          <Number>48</Number>
+        </Note>
+      </Tick7>
+      <Tick9>
+        <Note>
+          <Type>Bass</Type>
+          <Number>63</Number>
+        </Note>
+      </Tick9>
+      <Tick11>
+        <Note>
+          <Type>Bass</Type>
+          <Number>62</Number>
+        </Note>
+      </Tick11>
       <Tick13>
         <Note>
           <Type>Melody</Type>
@@ -1452,10 +1476,30 @@
     <Bar33>
       <Tick1>
         <Note>
+          <Type>Bass</Type>
+          <Number>51</Number>
+        </Note>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+        <Note>
           <Type>Melody</Type>
           <Number>70</Number>
         </Note>
       </Tick1>
+      <Tick5>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+      </Tick5>
+      <Tick9>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+      </Tick9>
       <Tick11>
         <Note>
           <Type>Melody</Type>
@@ -1463,6 +1507,10 @@
         </Note>
       </Tick11>
       <Tick13>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
         <Note>
           <Type>Melody</Type>
           <Number>72</Number>
@@ -1472,72 +1520,207 @@
     <Bar34>
       <Tick1>
         <Note>
-          <Number>70</Number>
+          <Type>Bass</Type>
+          <Number>50</Number>
+        </Note>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+        <Note>
           <Type>Melody</Type>
+          <Number>70</Number>
         </Note>
       </Tick1>
+      <Tick5>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+      </Tick5>
       <Tick9>
         <Note>
-          <Number>65</Number>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+        <Note>
           <Type>Melody</Type>
+          <Number>65</Number>
         </Note>
       </Tick9>
+      <Tick13>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+      </Tick13>
     </Bar34>
     <Bar35>
       <Tick1>
         <Note>
-          <Number>63</Number>
+          <Type>Bass</Type>
+          <Number>48</Number>
+        </Note>
+        <Note>
+          <Type>Bass</Type>
+          <Number>55</Number>
+        </Note>
+        <Note>
           <Type>Melody</Type>
+          <Number>63</Number>
         </Note>
       </Tick1>
+      <Tick5>
+        <Note>
+          <Type>Bass</Type>
+          <Number>55</Number>
+        </Note>
+      </Tick5>
+      <Tick9>
+        <Note>
+          <Type>Bass</Type>
+          <Number>55</Number>
+        </Note>
+      </Tick9>
+      <Tick13>
+        <Note>
+          <Type>Bass</Type>
+          <Number>55</Number>
+        </Note>
+      </Tick13>
     </Bar35>
-    <Bar36 />
-    <Bar37>
+    <Bar36>
+      <Tick1>
+        <Note>
+          <Type>Bass</Type>
+          <Number>45</Number>
+        </Note>
+      </Tick1>
+      <Tick3>
+        <Note>
+          <Type>Bass</Type>
+          <Number>48</Number>
+        </Note>
+      </Tick3>
+      <Tick5>
+        <Note>
+          <Type>Bass</Type>
+          <Number>53</Number>
+        </Note>
+      </Tick5>
+      <Tick7>
+        <Note>
+          <Type>Bass</Type>
+          <Number>60</Number>
+        </Note>
+      </Tick7>
+      <Tick9>
+        <Note>
+          <Type>Melody</Type>
+          <Number>67</Number>
+        </Note>
+      </Tick9>
       <Tick11>
         <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
+          <Type>Bass</Type>
+          <Number>53</Number>
         </Note>
       </Tick11>
       <Tick13>
         <Note>
-          <Number>72</Number>
           <Type>Melody</Type>
+          <Number>67</Number>
         </Note>
       </Tick13>
+    </Bar36>
+    <Bar37>
+      <Tick1>
+        <Note>
+          <Type>Bass</Type>
+          <Number>46</Number>
+        </Note>
+      </Tick1>
+      <Tick3>
+        <Note>
+          <Type>Bass</Type>
+          <Number>60</Number>
+        </Note>
+      </Tick3>
+      <Tick5>
+        <Note>
+          <Type>Melody</Type>
+          <Number>65</Number>
+        </Note>
+      </Tick5>
+      <Tick7>
+        <Note>
+          <Type>Bass</Type>
+          <Number>46</Number>
+        </Note>
+      </Tick7>
+      <Tick9>
+        <Note>
+          <Type>Bass</Type>
+          <Number>62</Number>
+        </Note>
+      </Tick9>
+      <Tick11>
+        <Note>
+          <Type>Melody</Type>
+          <Number>65</Number>
+        </Note>
+      </Tick11>
+      <Tick13>
+        <Note>
+          <Type>Melody</Type>
+          <Number>72</Number>
+        </Note>
+      </Tick13>
+      <Tick15>
+        <Note>
+          <Type>Bass</Type>
+          <Number>58</Number>
+        </Note>
+      </Tick15>
     </Bar37>
     <Bar38>
-      <Tick1>
+      <Tick5>
         <Note>
           <Number>70</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick1>
-      <Tick9>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
-    </Bar38>
-    <Bar39>
-      <Tick1>
-        <Note>
-          <Number>63</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick1>
-    </Bar39>
-    <Bar40>
-      <Tick9>
-        <Note>
-          <Number>67</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
+      </Tick5>
       <Tick13>
         <Note>
-          <Number>67</Number>
+          <Number>75</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+    </Bar38>
+    <Bar39>
+      <Tick5>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick5>
+    </Bar39>
+    <Bar40>
+      <Tick1>
+        <Note>
+          <Number>72</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
+      <Tick3>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick3>
+      <Tick13>
+        <Note>
+          <Number>75</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
@@ -1545,19 +1728,13 @@
     <Bar41>
       <Tick5>
         <Note>
-          <Number>65</Number>
+          <Number>74</Number>
           <Type>Melody</Type>
         </Note>
       </Tick5>
-      <Tick11>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick11>
       <Tick13>
         <Note>
-          <Number>72</Number>
+          <Number>70</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
@@ -1565,41 +1742,53 @@
     <Bar42>
       <Tick5>
         <Note>
-          <Number>70</Number>
+          <Number>65</Number>
           <Type>Melody</Type>
         </Note>
       </Tick5>
+      <Tick7>
+        <Note>
+          <Number>65</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick7>
       <Tick13>
         <Note>
-          <Number>75</Number>
+          <Number>67</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
     </Bar42>
     <Bar43>
-      <Tick5>
+      <Tick13>
         <Note>
-          <Number>74</Number>
+          <Number>65</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick5>
+      </Tick13>
+      <Tick15>
+        <Note>
+          <Number>67</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick15>
     </Bar43>
     <Bar44>
       <Tick1>
         <Note>
-          <Number>72</Number>
+          <Number>65</Number>
           <Type>Melody</Type>
         </Note>
       </Tick1>
-      <Tick3>
+      <Tick9>
         <Note>
-          <Number>70</Number>
+          <Number>67</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick3>
+      </Tick9>
       <Tick13>
         <Note>
-          <Number>75</Number>
+          <Number>67</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
@@ -1607,13 +1796,19 @@
     <Bar45>
       <Tick5>
         <Note>
-          <Number>74</Number>
+          <Number>65</Number>
           <Type>Melody</Type>
         </Note>
       </Tick5>
+      <Tick11>
+        <Note>
+          <Number>65</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick11>
       <Tick13>
         <Note>
-          <Number>70</Number>
+          <Number>72</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
@@ -1621,73 +1816,91 @@
     <Bar46>
       <Tick5>
         <Note>
-          <Number>65</Number>
+          <Number>70</Number>
           <Type>Melody</Type>
         </Note>
       </Tick5>
-      <Tick7>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick7>
-      <Tick13>
-        <Note>
-          <Number>67</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar46>
-    <Bar47>
-      <Tick13>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-      <Tick15>
-        <Note>
-          <Number>67</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick15>
-    </Bar47>
-    <Bar48>
-      <Tick1>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick1>
       <Tick9>
         <Note>
           <Number>67</Number>
           <Type>Melody</Type>
         </Note>
       </Tick9>
+      <Tick11>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick11>
+    </Bar46>
+    <Bar47>
+      <Tick1>
+        <Note>
+          <Number>75</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
+      <Tick7>
+        <Note>
+          <Number>77</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick7>
       <Tick13>
         <Note>
-          <Number>67</Number>
+          <Number>74</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar48>
-    <Bar49>
+    </Bar47>
+    <Bar48>
+      <Tick1>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
       <Tick5>
         <Note>
-          <Number>65</Number>
+          <Number>72</Number>
           <Type>Melody</Type>
         </Note>
       </Tick5>
+      <Tick7>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick7>
       <Tick11>
         <Note>
-          <Number>65</Number>
+          <Number>70</Number>
           <Type>Melody</Type>
         </Note>
       </Tick11>
       <Tick13>
         <Note>
-          <Number>72</Number>
+          <Number>75</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+    </Bar48>
+    <Bar49>
+      <Tick9>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick9>
+      <Tick11>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick11>
+      <Tick13>
+        <Note>
+          <Number>70</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
@@ -1695,98 +1908,6 @@
     <Bar50>
       <Tick5>
         <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-      <Tick9>
-        <Note>
-          <Number>67</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
-      <Tick11>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick11>
-    </Bar50>
-    <Bar51>
-      <Tick1>
-        <Note>
-          <Number>75</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick1>
-      <Tick7>
-        <Note>
-          <Number>77</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick7>
-      <Tick13>
-        <Note>
-          <Number>74</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar51>
-    <Bar52>
-      <Tick1>
-        <Note>
-          <Number>74</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick1>
-      <Tick5>
-        <Note>
-          <Number>72</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-      <Tick7>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick7>
-      <Tick11>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick11>
-      <Tick13>
-        <Note>
-          <Number>75</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar52>
-    <Bar53>
-      <Tick9>
-        <Note>
-          <Number>74</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
-      <Tick11>
-        <Note>
-          <Number>74</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick11>
-      <Tick13>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar53>
-    <Bar54>
-      <Tick5>
-        <Note>
           <Number>65</Number>
           <Type>Melody</Type>
         </Note>
@@ -1797,10 +1918,10 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar54>
-    <Bar55 />
-    <Bar56 />
-    <Bar57>
+    </Bar50>
+    <Bar51 />
+    <Bar52 />
+    <Bar53>
       <Tick9>
         <Note>
           <Number>70</Number>
@@ -1825,17 +1946,17 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar57>
-    <Bar58 />
-    <Bar59>
+    </Bar53>
+    <Bar54 />
+    <Bar55>
       <Tick9>
         <Note>
           <Number>79</Number>
           <Type>Melody</Type>
         </Note>
       </Tick9>
-    </Bar59>
-    <Bar60>
+    </Bar55>
+    <Bar56>
       <Tick1>
         <Note>
           <Number>77</Number>
@@ -1866,8 +1987,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar60>
-    <Bar61>
+    </Bar56>
+    <Bar57>
       <Tick11>
         <Note>
           <Number>70</Number>
@@ -1880,8 +2001,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar61>
-    <Bar62>
+    </Bar57>
+    <Bar58>
       <Tick1>
         <Note>
           <Number>70</Number>
@@ -1912,10 +2033,10 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar62>
-    <Bar63 />
-    <Bar64 />
-    <Bar65>
+    </Bar58>
+    <Bar59 />
+    <Bar60 />
+    <Bar61>
       <Tick9>
         <Note>
           <Number>70</Number>
@@ -1940,9 +2061,9 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar65>
-    <Bar66 />
-    <Bar67>
+    </Bar61>
+    <Bar62 />
+    <Bar63>
       <Tick1>
         <Note>
           <Number>79</Number>
@@ -1955,8 +2076,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick9>
-    </Bar67>
-    <Bar68>
+    </Bar63>
+    <Bar64>
       <Tick1>
         <Note>
           <Number>74</Number>
@@ -1972,146 +2093,208 @@
       <Tick13>
         <Note>
           <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+    </Bar64>
+    <Bar65>
+      <Tick1>
+        <Note>
+          <Number>67</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
+      <Tick9>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick9>
+      <Tick13>
+        <Note>
+          <Number>75</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+    </Bar65>
+    <Bar66>
+      <Tick1>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
+      <Tick3>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick3>
+      <Tick5>
+        <Note>
+          <Number>62</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick5>
+      <Tick13>
+        <Note>
+          <Number>62</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+      <Tick15>
+        <Note>
+          <Number>63</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick15>
+    </Bar66>
+    <Bar67>
+      <Tick1>
+        <Note>
+          <Number>65</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
+      <Tick3>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick3>
+      <Tick5>
+        <Note>
+          <Number>69</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick5>
+      <Tick7>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick7>
+      <Tick9>
+        <Note>
+          <Number>72</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick9>
+      <Tick11>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick11>
+      <Tick13>
+        <Note>
+          <Number>69</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+      <Tick15>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick15>
+    </Bar67>
+    <Bar68>
+      <Tick1>
+        <Note>
+          <Number>69</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
+      <Tick3>
+        <Note>
+          <Number>67</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick3>
+      <Tick5>
+        <Note>
+          <Number>69</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick5>
+      <Tick7>
+        <Note>
+          <Number>67</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick7>
+      <Tick9>
+        <Note>
+          <Number>65</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick9>
+      <Tick13>
+        <Note>
+          <Number>67</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
     </Bar68>
     <Bar69>
-      <Tick1>
+      <Tick5>
         <Note>
-          <Number>67</Number>
+          <Number>65</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick1>
-      <Tick9>
+      </Tick5>
+      <Tick11>
+        <Note>
+          <Number>65</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick11>
+      <Tick13>
+        <Note>
+          <Number>72</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+    </Bar69>
+    <Bar70>
+      <Tick5>
         <Note>
           <Number>70</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick9>
+      </Tick5>
       <Tick13>
         <Note>
           <Number>75</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar69>
-    <Bar70>
-      <Tick1>
+    </Bar70>
+    <Bar71>
+      <Tick5>
         <Note>
           <Number>74</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick1>
-      <Tick3>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick3>
-      <Tick5>
-        <Note>
-          <Number>62</Number>
-          <Type>Melody</Type>
-        </Note>
       </Tick5>
-      <Tick13>
-        <Note>
-          <Number>62</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-      <Tick15>
-        <Note>
-          <Number>63</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick15>
-    </Bar70>
-    <Bar71>
-      <Tick1>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick1>
-      <Tick3>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick3>
-      <Tick5>
-        <Note>
-          <Number>69</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-      <Tick7>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick7>
-      <Tick9>
-        <Note>
-          <Number>72</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
-      <Tick11>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick11>
-      <Tick13>
-        <Note>
-          <Number>69</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-      <Tick15>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick15>
     </Bar71>
     <Bar72>
       <Tick1>
         <Note>
-          <Number>69</Number>
+          <Number>72</Number>
           <Type>Melody</Type>
         </Note>
       </Tick1>
       <Tick3>
         <Note>
-          <Number>67</Number>
+          <Number>70</Number>
           <Type>Melody</Type>
         </Note>
       </Tick3>
-      <Tick5>
-        <Note>
-          <Number>69</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-      <Tick7>
-        <Note>
-          <Number>67</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick7>
-      <Tick9>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
       <Tick13>
         <Note>
-          <Number>67</Number>
+          <Number>75</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
@@ -2119,80 +2302,18 @@
     <Bar73>
       <Tick5>
         <Note>
-          <Number>65</Number>
+          <Number>74</Number>
           <Type>Melody</Type>
         </Note>
       </Tick5>
-      <Tick11>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick11>
       <Tick13>
         <Note>
-          <Number>72</Number>
+          <Number>70</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
     </Bar73>
     <Bar74>
-      <Tick5>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-      <Tick13>
-        <Note>
-          <Number>75</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar74>
-    <Bar75>
-      <Tick5>
-        <Note>
-          <Number>74</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-    </Bar75>
-    <Bar76>
-      <Tick1>
-        <Note>
-          <Number>72</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick1>
-      <Tick3>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick3>
-      <Tick13>
-        <Note>
-          <Number>75</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar76>
-    <Bar77>
-      <Tick5>
-        <Note>
-          <Number>74</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-      <Tick13>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar77>
-    <Bar78>
       <Tick5>
         <Note>
           <Number>65</Number>
@@ -2211,8 +2332,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar78>
-    <Bar79>
+    </Bar74>
+    <Bar75>
       <Tick13>
         <Note>
           <Number>65</Number>
@@ -2225,8 +2346,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar79>
-    <Bar80>
+    </Bar75>
+    <Bar76>
       <Tick1>
         <Note>
           <Number>65</Number>
@@ -2245,8 +2366,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar80>
-    <Bar81>
+    </Bar76>
+    <Bar77>
       <Tick5>
         <Note>
           <Number>65</Number>
@@ -2265,8 +2386,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar81>
-    <Bar82>
+    </Bar77>
+    <Bar78>
       <Tick5>
         <Note>
           <Number>70</Number>
@@ -2285,8 +2406,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick11>
-    </Bar82>
-    <Bar83>
+    </Bar78>
+    <Bar79>
       <Tick1>
         <Note>
           <Number>75</Number>
@@ -2305,8 +2426,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar83>
-    <Bar84>
+    </Bar79>
+    <Bar80>
       <Tick1>
         <Note>
           <Number>74</Number>
@@ -2331,6 +2452,55 @@
           <Type>Melody</Type>
         </Note>
       </Tick11>
+      <Tick13>
+        <Note>
+          <Number>75</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+    </Bar80>
+    <Bar81>
+      <Tick9>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick9>
+      <Tick11>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick11>
+      <Tick13>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+    </Bar81>
+    <Bar82>
+      <Tick5>
+        <Note>
+          <Number>65</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick5>
+      <Tick13>
+        <Note>
+          <Number>67</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick13>
+    </Bar82>
+    <Bar83 />
+    <Bar84>
+      <Tick9>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick9>
       <Tick13>
         <Note>
           <Number>75</Number>
@@ -2376,47 +2546,53 @@
     <Bar88>
       <Tick9>
         <Note>
-          <Number>74</Number>
+          <Number>72</Number>
           <Type>Melody</Type>
         </Note>
       </Tick9>
-      <Tick13>
-        <Note>
-          <Number>75</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
     </Bar88>
     <Bar89>
+      <Tick1>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
       <Tick9>
         <Note>
-          <Number>74</Number>
+          <Number>70</Number>
           <Type>Melody</Type>
         </Note>
       </Tick9>
       <Tick11>
         <Note>
-          <Number>74</Number>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick11>
+      <Tick15>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick15>
+    </Bar89>
+    <Bar90>
+      <Tick9>
+        <Note>
+          <Number>65</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick9>
+      <Tick11>
+        <Note>
+          <Number>65</Number>
           <Type>Melody</Type>
         </Note>
       </Tick11>
       <Tick13>
         <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar89>
-    <Bar90>
-      <Tick5>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-      <Tick13>
-        <Note>
-          <Number>67</Number>
+          <Number>63</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
@@ -2443,12 +2619,12 @@
           <Type>Melody</Type>
         </Note>
       </Tick9>
-      <Tick11>
+      <Tick13>
         <Note>
           <Number>70</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick11>
+      </Tick13>
       <Tick15>
         <Note>
           <Number>70</Number>
@@ -2457,56 +2633,80 @@
       </Tick15>
     </Bar93>
     <Bar94>
+      <Tick3>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick3>
+      <Tick5>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick5>
       <Tick9>
         <Note>
           <Number>65</Number>
           <Type>Melody</Type>
         </Note>
       </Tick9>
-      <Tick11>
+      <Tick13>
         <Note>
           <Number>65</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick11>
-      <Tick13>
+      </Tick13>
+      <Tick15>
         <Note>
           <Number>63</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick13>
+      </Tick15>
     </Bar94>
     <Bar95 />
     <Bar96>
+      <Tick7>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick7>
       <Tick9>
         <Note>
           <Number>72</Number>
           <Type>Melody</Type>
         </Note>
       </Tick9>
+      <Tick11>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick11>
     </Bar96>
     <Bar97>
       <Tick1>
         <Note>
-          <Number>70</Number>
+          <Number>74</Number>
           <Type>Melody</Type>
         </Note>
       </Tick1>
       <Tick9>
         <Note>
-          <Number>70</Number>
+          <Number>75</Number>
           <Type>Melody</Type>
         </Note>
       </Tick9>
       <Tick13>
         <Note>
-          <Number>70</Number>
+          <Number>74</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
       <Tick15>
         <Note>
-          <Number>70</Number>
+          <Number>72</Number>
           <Type>Melody</Type>
         </Note>
       </Tick15>
@@ -2518,39 +2718,26 @@
           <Type>Melody</Type>
         </Note>
       </Tick3>
-      <Tick5>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
       <Tick9>
         <Note>
-          <Number>65</Number>
+          <Number>67</Number>
           <Type>Melody</Type>
         </Note>
       </Tick9>
-      <Tick13>
+      <Tick11>
         <Note>
           <Number>65</Number>
           <Type>Melody</Type>
         </Note>
+      </Tick11>
+      <Tick13>
+        <Note>
+          <Number>74</Number>
+          <Type>Melody</Type>
+        </Note>
       </Tick13>
-      <Tick15>
-        <Note>
-          <Number>63</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick15>
     </Bar98>
-    <Bar99 />
-    <Bar100>
-      <Tick7>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick7>
+    <Bar99>
       <Tick9>
         <Note>
           <Number>72</Number>
@@ -2563,120 +2750,54 @@
           <Type>Melody</Type>
         </Note>
       </Tick11>
-    </Bar100>
-    <Bar101>
-      <Tick1>
+      <Tick15>
         <Note>
-          <Number>74</Number>
+          <Number>67</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick1>
-      <Tick9>
+      </Tick15>
+    </Bar99>
+    <Bar100>
+      <Tick5>
         <Note>
-          <Number>75</Number>
+          <Number>65</Number>
           <Type>Melody</Type>
         </Note>
-      </Tick9>
+      </Tick5>
       <Tick13>
         <Note>
-          <Number>74</Number>
+          <Number>65</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
       <Tick15>
         <Note>
+          <Number>65</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick15>
+    </Bar100>
+    <Bar101>
+      <Tick1>
+        <Note>
           <Number>72</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick1>
+      <Tick9>
+        <Note>
+          <Number>70</Number>
+          <Type>Melody</Type>
+        </Note>
+      </Tick9>
+      <Tick15>
+        <Note>
+          <Number>70</Number>
           <Type>Melody</Type>
         </Note>
       </Tick15>
     </Bar101>
     <Bar102>
-      <Tick3>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick3>
-      <Tick9>
-        <Note>
-          <Number>67</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
-      <Tick11>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick11>
-      <Tick13>
-        <Note>
-          <Number>74</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-    </Bar102>
-    <Bar103>
-      <Tick9>
-        <Note>
-          <Number>72</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
-      <Tick11>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick11>
-      <Tick15>
-        <Note>
-          <Number>67</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick15>
-    </Bar103>
-    <Bar104>
-      <Tick5>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick5>
-      <Tick13>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick13>
-      <Tick15>
-        <Note>
-          <Number>65</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick15>
-    </Bar104>
-    <Bar105>
-      <Tick1>
-        <Note>
-          <Number>72</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick1>
-      <Tick9>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick9>
-      <Tick15>
-        <Note>
-          <Number>70</Number>
-          <Type>Melody</Type>
-        </Note>
-      </Tick15>
-    </Bar105>
-    <Bar106>
       <Tick1>
         <Note>
           <Number>65</Number>
@@ -2695,9 +2816,9 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar106>
-    <Bar107 />
-    <Bar108>
+    </Bar102>
+    <Bar103 />
+    <Bar104>
       <Tick7>
         <Note>
           <Number>70</Number>
@@ -2716,8 +2837,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick11>
-    </Bar108>
-    <Bar109>
+    </Bar104>
+    <Bar105>
       <Tick1>
         <Note>
           <Number>74</Number>
@@ -2742,8 +2863,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar109>
-    <Bar110>
+    </Bar105>
+    <Bar106>
       <Tick3>
         <Note>
           <Number>70</Number>
@@ -2768,8 +2889,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar110>
-    <Bar111>
+    </Bar106>
+    <Bar107>
       <Tick9>
         <Note>
           <Number>74</Number>
@@ -2788,8 +2909,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar111>
-    <Bar112>
+    </Bar107>
+    <Bar108>
       <Tick3>
         <Note>
           <Number>72</Number>
@@ -2802,8 +2923,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick5>
-    </Bar112>
-    <Bar113>
+    </Bar108>
+    <Bar109>
       <Tick13>
         <Note>
           <Number>65</Number>
@@ -2816,8 +2937,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar113>
-    <Bar114>
+    </Bar109>
+    <Bar110>
       <Tick1>
         <Note>
           <Number>72</Number>
@@ -2836,8 +2957,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar114>
-    <Bar115>
+    </Bar110>
+    <Bar111>
       <Tick1>
         <Note>
           <Number>65</Number>
@@ -2856,16 +2977,16 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar115>
-    <Bar116>
+    </Bar111>
+    <Bar112>
       <Tick13>
         <Note>
           <Number>74</Number>
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar116>
-    <Bar117>
+    </Bar112>
+    <Bar113>
       <Tick5>
         <Note>
           <Number>77</Number>
@@ -2878,8 +2999,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar117>
-    <Bar118>
+    </Bar113>
+    <Bar114>
       <Tick1>
         <Note>
           <Number>79</Number>
@@ -2898,8 +3019,8 @@
           <Type>Melody</Type>
         </Note>
       </Tick15>
-    </Bar118>
-    <Bar119>
+    </Bar114>
+    <Bar115>
       <Tick1>
         <Note>
           <Number>74</Number>
@@ -2918,6 +3039,6 @@
           <Type>Melody</Type>
         </Note>
       </Tick13>
-    </Bar119>
+    </Bar115>
   </Bars>
 </Song>
