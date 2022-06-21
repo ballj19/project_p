@@ -86,6 +86,7 @@ namespace project_p
             Pattern.Items.Add("Pyramid");
             Pattern.Items.Add("Climb9");
             Pattern.Items.Add("First Fifth Octave");
+            Pattern.Items.Add("Random");
 
             Pattern.SelectedIndex = 0;
         }
@@ -108,11 +109,16 @@ namespace project_p
                 case "First Fifth Octave":
                     FirstFifthOctave();
                     break;
+                case "Random":
+                    Random();
+                    break;
             }
 
 
             SortTicks();
         }
+
+
 
         private void ResetBass()
         {
@@ -185,6 +191,34 @@ namespace project_p
             List<int> pattern = InvertPattern(new List<int> { 1, 5, 8, 8, 8, 8, 8, 8 });
 
             Activate(pattern);
+        }
+
+        private void Random()
+        {
+            ResetBass();
+
+
+            List<int> valid_notes = new List<int> { 1, 2, 3, 5, 7, 8, 9, 10, 12 };
+
+            List<int> pattern = new List<int> { 1 };
+
+            Random r = new Random();
+
+            for (int i = 0; i < Activations.SelectedIndex; i++)
+            {
+                int next_note = r.Next(0, valid_notes.Count - 1);
+
+                pattern.Add(valid_notes[next_note]);
+            }
+
+
+            pattern = InvertPattern(pattern);
+
+            Activate(pattern);
+
+            SortTicks();
+
+            PlayButton_Click(null, null);
         }
 
         private List<int> InvertPattern(List<int> pattern)

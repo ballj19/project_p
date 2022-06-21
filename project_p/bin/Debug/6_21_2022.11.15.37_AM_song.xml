@@ -1374,6 +1374,12 @@
           <Number>48</Number>
         </Note>
       </Tick1>
+      <Tick3>
+        <Note>
+          <Type>Bass</Type>
+          <Number>55</Number>
+        </Note>
+      </Tick3>
       <Tick5>
         <Note>
           <Type>Melody</Type>
@@ -1384,6 +1390,18 @@
           <Number>74</Number>
         </Note>
       </Tick5>
+      <Tick9>
+        <Note>
+          <Type>Bass</Type>
+          <Number>63</Number>
+        </Note>
+      </Tick9>
+      <Tick11>
+        <Note>
+          <Type>Bass</Type>
+          <Number>62</Number>
+        </Note>
+      </Tick11>
       <Tick13>
         <Note>
           <Type>Melody</Type>
