@@ -200,7 +200,10 @@ namespace project_p
 
             List<int> valid_notes = new List<int> { 1, 2, 3, 5, 7, 8, 9, 10, 12 };
 
-            List<int> pattern = new List<int> { 1 };
+            List<int> pattern = new List<int>();
+
+            //Add root note based on inversion
+            pattern.Add(1 + 2 * Inversion.SelectedIndex);
 
             Random r = new Random();
 
@@ -210,9 +213,6 @@ namespace project_p
 
                 pattern.Add(valid_notes[next_note]);
             }
-
-
-            pattern = InvertPattern(pattern);
 
             Activate(pattern);
 

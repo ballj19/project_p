@@ -25,7 +25,7 @@ namespace project_p
     {
         public int key_signature_offset = 15; //Eb
 
-        public string filepath = "song.xml";
+        public string filepath = @"C:\Users\" + Environment.UserName + @"\source\repos\project_p\project_p\songs\landslide.xml";
 
         public MainWindow()
         {
@@ -147,7 +147,10 @@ namespace project_p
             string prefix = now.ToShortDateString().Replace('/', '_');
             prefix += "." + now.ToLongTimeString().Replace(' ', '_').Replace(':','.') + "_";
 
-            File.Copy(filepath, prefix + filepath);
+            string dir = System.IO.Path.GetDirectoryName(filepath);
+            string file = System.IO.Path.GetFileName(filepath);
+
+            File.Copy(filepath, dir + "\\" + prefix + file);
         }
 
         private void DeleteBarButton_Click(object sender, RoutedEventArgs e)
