@@ -18,7 +18,7 @@ namespace project_p
 
             M.MidiFile mf;
 
-            using (Stream stm = File.OpenRead(@"C:\Users\jakeb\Downloads\Landslide.mid"))
+            using (Stream stm = File.OpenRead(@"C:\Users\Jake\Downloads\Landslide.mid"))
                 mf = M.MidiFile.ReadFrom(stm);
 
 
@@ -30,13 +30,13 @@ namespace project_p
             result = result.AdjustTempo((double)player.bpm);
 
 
-            using (var stm = File.OpenWrite(@"C:\Users\jakeb\Downloads\song.mid"))
+            using (var stm = File.OpenWrite(@"C:\Users\Jake\Downloads\song.mid"))
             {
                 stm.SetLength(0);
                 result.WriteTo(stm);
             }
 
-            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Windows Media Player\wmplayer.exe", @"C:\Users\jakeb\Downloads\song.mid");
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Synthesia\Synthesia.exe", @"C:\Users\Jake\Downloads\song.mid");
         }
 
         private M.MidiFile RemoveEvents(M.MidiFile result)
