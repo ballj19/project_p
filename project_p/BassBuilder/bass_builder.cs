@@ -83,6 +83,7 @@ namespace project_p
         private void FillPatterns()
         {
             Pattern.Items.Add("Quarter Note");
+            Pattern.Items.Add("Eighth Note Alternating");
             Pattern.Items.Add("Pyramid");
             Pattern.Items.Add("Climb9");
             Pattern.Items.Add("First Fifth Octave");
@@ -99,6 +100,9 @@ namespace project_p
             {
                 case "Quarter Note":
                     QuarterNote();
+                    break;
+                case "Eighth Note Alternating":
+                    EighthNoteAlternating();
                     break;
                 case "Pyramid":
                     Pyramid();
@@ -170,6 +174,37 @@ namespace project_p
             GetTick(5).SetPianoKey(fifth, PianoKey.KeyState.Bass);
             GetTick(9).SetPianoKey(fifth, PianoKey.KeyState.Bass);
             GetTick(13).SetPianoKey(fifth, PianoKey.KeyState.Bass);
+        }
+
+        private void EighthNoteAlternating()
+        {
+            byte first;
+            byte fifth;
+
+            if (Inversion.SelectedIndex == 0)
+            {
+                first = GetNoteValue(1);
+                fifth = GetNoteValue(5);
+            }
+            else if (Inversion.SelectedIndex == 1)
+            {
+                first = GetNoteValue(3);
+                fifth = GetNoteValue(8);
+            }
+            else
+            {
+                first = GetNoteValue(5);
+                fifth = GetNoteValue(10);
+            }
+
+            GetTick(1).SetPianoKey(first, PianoKey.KeyState.Bass);
+            GetTick(3).SetPianoKey(fifth, PianoKey.KeyState.Bass);
+            GetTick(5).SetPianoKey(first, PianoKey.KeyState.Bass);
+            GetTick(7).SetPianoKey(fifth, PianoKey.KeyState.Bass);
+            GetTick(9).SetPianoKey(first, PianoKey.KeyState.Bass);
+            GetTick(11).SetPianoKey(fifth, PianoKey.KeyState.Bass);
+            GetTick(13).SetPianoKey(first, PianoKey.KeyState.Bass);
+            GetTick(15).SetPianoKey(fifth, PianoKey.KeyState.Bass);
         }
 
         private void Pyramid()
