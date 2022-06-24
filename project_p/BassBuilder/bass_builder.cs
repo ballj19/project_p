@@ -87,6 +87,7 @@ namespace project_p
             Pattern.Items.Add("Pyramid");
             Pattern.Items.Add("Climb9");
             Pattern.Items.Add("First Fifth Octave");
+            Pattern.Items.Add("Can't Help Falling In Love");
             Pattern.Items.Add("Random");
 
             Pattern.SelectedIndex = 0;
@@ -112,6 +113,9 @@ namespace project_p
                     break;
                 case "First Fifth Octave":
                     FirstFifthOctave();
+                    break;
+                case "Can't Help Falling In Love":
+                    CantHelpFallingInLove();
                     break;
                 case "Random":
                     Random();
@@ -173,7 +177,9 @@ namespace project_p
             GetTick(1).SetPianoKey(fifth, PianoKey.KeyState.Bass);
             GetTick(5).SetPianoKey(fifth, PianoKey.KeyState.Bass);
             GetTick(9).SetPianoKey(fifth, PianoKey.KeyState.Bass);
-            GetTick(13).SetPianoKey(fifth, PianoKey.KeyState.Bass);
+
+            if(player.NumberOfTicksPerBar() >= 13)
+                GetTick(13).SetPianoKey(fifth, PianoKey.KeyState.Bass);
         }
 
         private void EighthNoteAlternating()
@@ -202,9 +208,13 @@ namespace project_p
             GetTick(5).SetPianoKey(first, PianoKey.KeyState.Bass);
             GetTick(7).SetPianoKey(fifth, PianoKey.KeyState.Bass);
             GetTick(9).SetPianoKey(first, PianoKey.KeyState.Bass);
+
             GetTick(11).SetPianoKey(fifth, PianoKey.KeyState.Bass);
-            GetTick(13).SetPianoKey(first, PianoKey.KeyState.Bass);
-            GetTick(15).SetPianoKey(fifth, PianoKey.KeyState.Bass);
+            if (player.NumberOfTicksPerBar() >= 13)
+            {
+                GetTick(13).SetPianoKey(first, PianoKey.KeyState.Bass);
+                GetTick(15).SetPianoKey(fifth, PianoKey.KeyState.Bass);
+            }
         }
 
         private void Pyramid()
@@ -224,6 +234,13 @@ namespace project_p
         private void FirstFifthOctave()
         {
             List<int> pattern = InvertPattern(new List<int> { 1, 5, 8, 8, 8, 8, 8, 8 });
+
+            Activate(pattern);
+        }
+
+        private void CantHelpFallingInLove()
+        {
+            List<int> pattern = InvertPattern(new List<int> { 1, 5, 12, 8, 10, 12 });
 
             Activate(pattern);
         }
@@ -304,7 +321,7 @@ namespace project_p
         {
             List<int> place_activations = new List<int>();
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < player.time_signature_top; i++)
             {
                 if (!HasTick(i * 4 + 1) && activations > 0)
                 {
@@ -320,7 +337,7 @@ namespace project_p
         {
             List<int> place_activations = new List<int>();
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < player.time_signature_top; i++)
             {
                 if (!HasTick(i * 4 + 3) && activations > 0)
                 {

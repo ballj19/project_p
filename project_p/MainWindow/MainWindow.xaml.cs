@@ -23,9 +23,9 @@ namespace project_p
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int key_signature_offset = 15; //Eb
+        public int key_signature_offset = 14; //D
 
-        public string filepath = @"C:\Users\" + Environment.UserName + @"\source\repos\project_p\project_p\songs\landslide.xml";
+        public string filepath = @"C:\Users\" + Environment.UserName + @"\source\repos\project_p\project_p\songs\CantHelpFallingInLove.xml";
 
         public MainWindow()
         {

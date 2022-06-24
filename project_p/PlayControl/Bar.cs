@@ -22,7 +22,8 @@ namespace project_p
 
         public void Play()
         {
-            for (int tick = 1; tick <= 16; tick++)
+
+            for (int tick = 1; tick <= player.NumberOfTicksPerBar(); tick++)
             {
                 XmlNode tick_node = xml.SelectSingleNode("Tick" + tick);
 
@@ -38,7 +39,7 @@ namespace project_p
                     }
                 }
 
-                double sleep = (double)player.time_signature_bottom / (double)player.bpm * 60.0 * 1000.0 / 16.0;
+                double sleep = (double)player.time_signature_top / (double)player.bpm * 60.0 * 1000.0 / player.NumberOfTicksPerBar();
                 Thread.Sleep((int)sleep);
             }
         }
