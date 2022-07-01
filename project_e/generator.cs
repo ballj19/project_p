@@ -13,6 +13,7 @@ namespace project_e
         int bpm = 80;
         int time_signature_top = 4;
         int time_signature_bottom = 4;
+        public bool repeat = false;
         Random r = new Random();
 
         List<int> notes_in_key = new List<int>();
@@ -83,6 +84,17 @@ namespace project_e
             }
         }
 
+        public void Repeat(int bars, int max_notes, int max_note_distance)
+        {
+            repeat = true;
+
+            while(repeat)
+            {
+                Generate(bars, max_notes, max_note_distance);
+                Thread.Sleep(10000);
+            }
+        }
+
         public void Generate(int bars, int max_notes, int max_note_distance)
         {
             note_location = notes_in_key.IndexOf(starting_note);
@@ -90,19 +102,26 @@ namespace project_e
             int number_of_notes = r.Next(2, max_notes + 1);
             double number_of_ticks_per_bar = 4.0;
 
-            for(int i = 0; i < number_of_notes; i++)
+            double sleep = (double)time_signature_top / (double)bpm * 60.0 * 1000.0 / number_of_ticks_per_bar;
+
+            for (int i = 0; i < number_of_notes; i++)
             {
                 int midi = notes_in_key[note_location];
 
                 Play((byte)midi, 100);
+                Play((byte)(starting_note - 12), 65);
 
-                double sleep = (double)time_signature_top / (double)bpm * 60.0 * 1000.0 / number_of_ticks_per_bar;
 
                 Thread.Sleep((int)sleep);
 
                 note_location += r.Next(-1 * max_note_distance, max_note_distance + 1);
             }
 
+            for(int i = 0; i < max_notes - number_of_notes; i++)
+            {
+                Play((byte)(starting_note - 12), 65);
+                Thread.Sleep((int)sleep);
+            }
 
         }
     }

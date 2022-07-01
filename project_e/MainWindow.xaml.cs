@@ -22,6 +22,8 @@ namespace project_e
     {
         Generator g;
 
+        bool repeat = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,6 +34,19 @@ namespace project_e
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
             g.Generate(1, 4, 1);
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+                g.Generate(1, 4, 1);
+            if (e.Key == Key.R)
+            {
+                if (g.repeat)
+                    g.repeat = false;
+                else
+                    g.Repeat(1, 4, 1);
+            }
         }
     }
 }
