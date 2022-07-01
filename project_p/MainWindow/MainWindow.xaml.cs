@@ -25,7 +25,7 @@ namespace project_p
     {
         public int key_signature_offset = 14; //D
 
-        public string filepath = @"C:\Users\" + Environment.UserName + @"\source\repos\project_p\project_p\songs\CantHelpFallingInLove.xml";
+        public string filepath = @"C:\Users\" + Environment.UserName + @"\source\repos\project_p\project_p\songs\Iris.xml";
 
         public MainWindow()
         {
@@ -196,6 +196,21 @@ namespace project_p
         private void InsertBarButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void FillEighthNotesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i = 1; i < player.NumberOfTicksPerBar(); i += 2)
+            {
+                GetTick(i);
+            }
+        }
+
+        private void FillQuarterNotesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            for(int i = 1; i < player.NumberOfTicksPerBar(); i += 4)
+            {
+                GetTick(i);
+            }
         }
     }
 }

@@ -23,9 +23,11 @@
                 <Button x:Name="PrevBar" Content="-" HorizontalAlignment="Center" Margin="161,7,257,0" VerticalAlignment="Top" Width="20" Click="PrevBar_Click"/>
                 <TextBox x:Name="BarNumber" Text="1" HorizontalAlignment="Center"  Margin="195,7,220,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="23"/>
                 <Button x:Name="NextBar" Content="+" HorizontalAlignment="Center" Margin="231,7,187,0" VerticalAlignment="Top" Width="20" Click="NextBar_Click"/>
-                <Button x:Name="AddTickButton" Content="AddTick" HorizontalAlignment="Right" Margin="0,0,211,17" VerticalAlignment="Bottom" Width="50" Click="AddTickButton_Click"/>
-                <Button x:Name="InsertBar" Content="Insert Bar" HorizontalAlignment="Right" Margin="0,0,75,47" VerticalAlignment="Bottom" Width="69" Click="InsertBarButton_Click"/>
-                <Button x:Name="DeleteBar" Content="Delete Bar" HorizontalAlignment="Right" Margin="0,0,75,16" VerticalAlignment="Bottom" Width="69" Click="DeleteBarButton_Click"/>
+                <Button x:Name="AddTickButton" Content="AddTick" HorizontalAlignment="Right" Margin="0,0,206,17" VerticalAlignment="Bottom" Width="50" Click="AddTickButton_Click"/>
+                <Button x:Name="InsertBar" Content="Insert Bar" HorizontalAlignment="Right" Margin="0,0,13,47" VerticalAlignment="Bottom" Width="69" Click="InsertBarButton_Click"/>
+                <Button x:Name="DeleteBar" Content="Delete Bar" HorizontalAlignment="Right" Margin="0,0,13,16" VerticalAlignment="Bottom" Width="69" Click="DeleteBarButton_Click"/>
+                <Button x:Name="FillEighthNotesBtn" Content="Fill Eighth" HorizontalAlignment="Right" Margin="0,0,114,17" VerticalAlignment="Bottom" Width="75" Click="FillEighthNotesBtn_Click"/>
+                <Button x:Name="FillQuarterNotesBtn" Content="Fill Quarter" HorizontalAlignment="Right" Margin="0,0,271,17" VerticalAlignment="Bottom" Width="75" Click="FillQuarterNotesBtn_Click"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Bass Builder" HorizontalAlignment="Right" Height="224" Margin="0,300,20,0" VerticalAlignment="Top" Width="450">
