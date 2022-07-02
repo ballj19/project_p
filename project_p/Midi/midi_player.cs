@@ -42,7 +42,7 @@ namespace project_p
         private int handle = 0;
         MidiFile file;
 
-        public int bpm = 80;
+        public int bpm = 120;
         public int time_signature_bottom = 4;
         public int time_signature_top = 3;
 
