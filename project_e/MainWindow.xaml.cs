@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
+using project_p;
 
 namespace project_e
 {
@@ -46,6 +48,26 @@ namespace project_e
                     g.repeat = false;
                 else
                     g.Repeat(1, 4, 1);
+            }
+        }
+
+
+        private void ImportFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    string filePath = openFileDialog.FileName;
+
+                    SongImporter si = new SongImporter(filePath);
+                }
             }
         }
     }
