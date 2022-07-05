@@ -3,20 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
-using System.IO;
-using project_p;
 
 namespace project_e
 {
-    internal class SongImporter
+    internal class Bar
     {
-        public SongImporter(string file)
-        {
-
-        }
-
-
+        string name;
+        int time_signature_top;
+        int time_signature_bottom;
+        string key_signature;
 
     }
 }
