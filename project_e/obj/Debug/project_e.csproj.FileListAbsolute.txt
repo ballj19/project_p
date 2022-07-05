@@ -13,6 +13,7 @@ C:\Users\jakeb\source\repos\project_p\project_e\obj\Debug\project_e.csproj.Gener
 C:\Users\jakeb\source\repos\project_p\project_e\obj\Debug\project_e.csproj.CoreCompileInputs.cache
 C:\Users\jakeb\source\repos\project_p\project_e\obj\Debug\project_e.exe
 C:\Users\jakeb\source\repos\project_p\project_e\obj\Debug\project_e.pdb
+<<<<<<< HEAD
 C:\Users\ballj\source\repos\project_p\project_e\bin\Debug\project_e.exe.config
 C:\Users\ballj\source\repos\project_p\project_e\bin\Debug\project_e.exe
 C:\Users\ballj\source\repos\project_p\project_e\bin\Debug\project_e.pdb
@@ -36,3 +37,28 @@ C:\Users\ballj\source\repos\project_p\project_e\obj\Debug\project_e.csproj.CoreC
 C:\Users\ballj\source\repos\project_p\project_e\obj\Debug\project_e.csproj.CopyComplete
 C:\Users\ballj\source\repos\project_p\project_e\obj\Debug\project_e.exe
 C:\Users\ballj\source\repos\project_p\project_e\obj\Debug\project_e.pdb
+=======
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.csproj.AssemblyReference.cache
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\MainWindow.g.cs
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\App.g.cs
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e_MarkupCompile.cache
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e_MarkupCompile.lref
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.exe
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.pdb
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\project_e.exe.config
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\project_e.exe
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\project_e.pdb
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\project_p.exe
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\Midi.dll
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\project_p.pdb
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\project_p.exe.config
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\Midi.pdb
+C:\Users\Jake\source\repos\project_p\project_e\bin\Debug\Midi.xml
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\MainWindow.baml
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.g.resources
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.Properties.Resources.resources
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.csproj.GenerateResource.cache
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.csproj.CoreCompileInputs.cache
+C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\project_e.csproj.CopyComplete
+>>>>>>> b46a92f2133cf3131d93eae330f6c89f8ec3ad8e

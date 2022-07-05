@@ -5,11 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:project_e"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="482" Width="831"
         KeyDown="Window_KeyDown">
     <Grid>
+<<<<<<< HEAD
         <Button x:Name="Generate" Content="Generate" HorizontalAlignment="Left" Margin="330,167,0,0" VerticalAlignment="Top" Width="75" Click="Generate_Click"/>
         <Button x:Name="ImportFile" Content="Import" HorizontalAlignment="Left" Margin="417,167,0,0" VerticalAlignment="Top" Width="75" Click="ImportFileButton_Click"/>
+=======
+        <Button x:Name="Generate" Content="Generate" HorizontalAlignment="Left" Margin="715,404,0,0" VerticalAlignment="Top" Width="75" Click="Generate_Click"/>
+        <Button x:Name="ImportFile" Content="Import" HorizontalAlignment="Left" Margin="10,404,0,0" VerticalAlignment="Top" Width="75" Click="ImportFileButton_Click"/>
+        <ComboBox x:Name="BiggestNoteHop" HorizontalAlignment="Left" Margin="715,351,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Biggest Hop" HorizontalAlignment="Left" Margin="715,320,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="NumberOfBars" HorizontalAlignment="Left" Margin="630,351,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="# of Bars" HorizontalAlignment="Left" Margin="639,320,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Tempo" HorizontalAlignment="Left" Margin="630,404,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="75"/>
+        <Label  Content="Tempo" HorizontalAlignment="Left" Margin="645,378,0,0" VerticalAlignment="Top"/>
+>>>>>>> b46a92f2133cf3131d93eae330f6c89f8ec3ad8e
 
     </Grid>
 </Window>
