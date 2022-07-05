@@ -28,9 +28,10 @@ namespace project_e
             AddToSongList(midi_file);
         }
 
+        private int[,] ExtractMelody(MidiFile midi_file)
+        {
+            MidiTrack melody = midi_file.Tracks[0];
 
-
-<<<<<<< HEAD
             int length_of_bar = midi_file.TicksPerQuarterNote * 4;
 
             int number_of_bars = Math.Max(melody.MidiEvents.Last().Time, midi_file.Tracks[1].MidiEvents.Last().Time) / length_of_bar + 1;
@@ -221,8 +222,5 @@ namespace project_e
 
             doc.Save(song_list);
         }
-
-=======
->>>>>>> b46a92f2133cf3131d93eae330f6c89f8ec3ad8e
     }
 }
