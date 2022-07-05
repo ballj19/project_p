@@ -10,15 +10,19 @@ namespace project_e
 {
     class Generator
     {
-        int bpm = 80;
-        int time_signature_top = 4;
-        int time_signature_bottom = 4;
-        public bool repeat = false;
-        Random r = new Random();
+        public int middle_c = 60;
+        public int number_of_ticks_per_bar = 8;
+        public int time_signature_top = 4;
+        public int time_signature_bottom = 4;
+        public int max_notes;
+        public int number_of_bars;
+        public int biggest_hop;
+        public int tempo;
+        public Random r = new Random();
 
-        List<int> notes_in_key = new List<int>();
-        int note_location = 0;
-        int starting_note = 60;
+        List<Bar> bars;
+        MainWindow mw;
+
 
         private int handle = 0;
 
@@ -30,13 +34,18 @@ namespace project_e
         [DllImport("winmm.dll")]
         protected static extern int midiOutShortMsg(int handle, int message);
 
-        public Generator()
+        public Generator(MainWindow mw)
         {
+            this.mw = mw;
             int result = midiOutOpen(ref handle, 0, null, 0, 0);
+        }
 
-            GetNotesInKey();
-
-            int test = 0;
+        public void SetParams(int b, int h, int t, int n)
+        {
+            max_notes = n;
+            number_of_bars = b;
+            biggest_hop = h;
+            tempo = t;
         }
 
         private void Play(byte note, byte velocity = 0x7F)
@@ -45,84 +54,65 @@ namespace project_e
             int r = midiOutShortMsg(handle, message);
         }
 
-        private void GetNotesInKey()
+        public async void PlayBar()
         {
-            int[] major_scale = { 2, 2, 1, 2, 2, 2, 1 };
+            double sleep = (double)time_signature_top / (double)tempo * 60.0 * 1000.0 / (double)number_of_ticks_per_bar;
 
-            int lower = note_location;
-            int higher = note_location;
+            mw.BassNotes.Items.Clear();
 
-            int scale_position = 0;
-
-            int midi = starting_note;
-
-            notes_in_key.Add(starting_note);
-
-            while(midi < 108)
+            foreach (Bar bar in bars)
             {
-                midi += major_scale[scale_position];
-                notes_in_key.Add(midi);
+                string list_text = (bar.bass + 1).ToString() + "  ";
 
-                scale_position++;
+                foreach (int tick in bar.notes)
+                {
+                    if (tick > 0)
+                        list_text += "O";
+                    else
+                        list_text += "-";
+                }
 
-                if (scale_position == major_scale.Length)
-                    scale_position = 0;
+                mw.BassNotes.Items.Add(list_text);
             }
-
-            scale_position = major_scale.Length - 1;
-            midi = starting_note;
-
-            while(midi > 21)
+            
+            await Task.Run(() =>
             {
-                midi -= major_scale[scale_position];
-                notes_in_key.Insert(0, midi);
+                for (int i = 0; i < number_of_ticks_per_bar / 2; i++)
+                {
+                        Play((byte)(middle_c - 12), 60);
+                    Thread.Sleep((int)(sleep * 2.0));
+                }
+            });
 
-                scale_position--;
+            foreach (Bar bar in bars)
+            {
+                await Task.Run(() =>
+                {
+                    for (int i = 0; i < number_of_ticks_per_bar; i++)
+                    {
+                        if (bar.notes[i] != 0)
+                            Play((byte)bar.notes[i], 100);
 
-                if (scale_position < 0)
-                    scale_position = major_scale.Length - 1;
+                        Thread.Sleep((int)sleep);
+                    }
+
+
+                });
+
             }
         }
 
-        public void Repeat(int bars, int max_notes, int max_note_distance)
+        public void NextBar()
         {
-            repeat = true;
+            bars = new List<Bar>();
 
-            while(repeat)
+            for(int i = 0; i < number_of_bars; i++)
             {
-                Generate(bars, max_notes, max_note_distance);
-                Thread.Sleep(10000);
+                bars.Add(new Bar(this));
             }
+
+            PlayBar();
         }
 
-        public void Generate(int bars, int max_notes, int max_note_distance)
-        {
-            note_location = notes_in_key.IndexOf(starting_note);
-
-            int number_of_notes = r.Next(2, max_notes + 1);
-            double number_of_ticks_per_bar = 4.0;
-
-            double sleep = (double)time_signature_top / (double)bpm * 60.0 * 1000.0 / number_of_ticks_per_bar;
-
-            for (int i = 0; i < number_of_notes; i++)
-            {
-                int midi = notes_in_key[note_location];
-
-                Play((byte)midi, 100);
-                Play((byte)(starting_note - 12), 65);
-
-
-                Thread.Sleep((int)sleep);
-
-                note_location += r.Next(-1 * max_note_distance, max_note_distance + 1);
-            }
-
-            for(int i = 0; i < max_notes - number_of_notes; i++)
-            {
-                Play((byte)(starting_note - 12), 65);
-                Thread.Sleep((int)sleep);
-            }
-
-        }
     }
 }

@@ -4,28 +4,16 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-C:\Users\ballj\source\repos\project_p\project_e\obj\Debug\
-=======
-C:\Users\Jake\source\repos\project_p\project_e\obj\Debug\
->>>>>>> b46a92f2133cf3131d93eae330f6c89f8ec3ad8e
+C:\Users\jakeb\source\repos\project_p\project_e\obj\Debug\
 project_e
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-C:\Users\ballj\source\repos\project_p\project_e\App.xaml
-1219584333
+C:\Users\jakeb\source\repos\project_p\project_e\App.xaml
+11151548125
 
-7358665524
-15895910386
-=======
-C:\Users\Jake\source\repos\project_p\project_e\App.xaml
-1219584333
-
-92003610151
-151145250920
->>>>>>> b46a92f2133cf3131d93eae330f6c89f8ec3ad8e
+91103155161
+151476684859
 MainWindow.xaml;
 
 False

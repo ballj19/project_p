@@ -16,5 +16,8 @@
         <Label Content="# of Bars" HorizontalAlignment="Left" Margin="639,320,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="Tempo" HorizontalAlignment="Left" Margin="630,404,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="75"/>
         <Label  Content="Tempo" HorizontalAlignment="Left" Margin="645,378,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="NumberOfNotes" HorizontalAlignment="Left" Margin="543,351,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="# of Notes" HorizontalAlignment="Left" Margin="552,320,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="BassNotes" HorizontalAlignment="Left" Height="100" Margin="360,135,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

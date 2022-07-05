@@ -23,7 +23,8 @@ namespace project_e
     /// </summary>
     public partial class MainWindow : Window
     {
-        SongRandomizer r;
+        //SongRandomizer r;
+        Generator g;
 
         public MainWindow()
         {
@@ -31,25 +32,30 @@ namespace project_e
 
             for(int i = 1; i <= 10; i++)
             {
+                NumberOfNotes.Items.Add(i);
                 NumberOfBars.Items.Add(i);
                 BiggestNoteHop.Items.Add(i);
             }
 
             NumberOfBars.SelectedIndex = 0;
             BiggestNoteHop.SelectedIndex = 0;
+            NumberOfNotes.SelectedIndex = 1;
+
+            g = new Generator(this);
         }
 
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
-            r = new SongRandomizer(int.Parse(NumberOfBars.SelectedValue.ToString()), int.Parse(BiggestNoteHop.SelectedValue.ToString()), int.Parse(Tempo.Text));
+            //r = new SongRandomizer(int.Parse(NumberOfBars.SelectedValue.ToString()), int.Parse(BiggestNoteHop.SelectedValue.ToString()), int.Parse(Tempo.Text));
+            g.SetParams(int.Parse(NumberOfBars.SelectedValue.ToString()), int.Parse(BiggestNoteHop.SelectedValue.ToString()), int.Parse(Tempo.Text), int.Parse(NumberOfNotes.Text));
         }
 
         private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == Key.Space)
-                r.NextBar();
+                g.NextBar();
             if (e.Key == Key.R)
-                r.RepeatBar();
+                g.PlayBar();
         }
 
 
