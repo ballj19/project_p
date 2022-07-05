@@ -102,6 +102,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Midi\Midi.csproj">
+      <Project>{2cee0914-509b-40bf-975c-b523434578db}</Project>
+      <Name>Midi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\project_p\project_p.csproj">
       <Project>{ef6c9da2-2892-45c0-9ef9-d5208d75a19c}</Project>
       <Name>project_p</Name>

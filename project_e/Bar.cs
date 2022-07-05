@@ -9,23 +9,39 @@ namespace project_e
 {
     internal class Bar
     {
+        public enum Type
+        {
+            Lead,
+            Standard,
+            Empty
+        }
+
         Generator generator;
 
         public int bass;
         List<int> notes_in_key = new List<int>();
         int note_location = 0;
         int starting_note = 60;
+        Type type;
 
         public List<int> notes = new List<int>();
 
-        public Bar(Generator g)
+        public Bar(Generator g, Type t = Type.Standard)
         {
-            this.generator = g;
+            generator = g;
+            type = t;
 
             GetNotesInKey();
 
+            if (t == Type.Standard)
+                GetStandardBar();
+            else if (t == Type.Empty)
+                GetEmptyBar();
+        }
+
+        private void GetStandardBar()
+        {
             note_location = notes_in_key.IndexOf(starting_note);
-            
 
 
             List<int> ticks = GetTicks(generator.number_of_ticks_per_bar);
@@ -47,6 +63,14 @@ namespace project_e
             }
 
             bass = generator.r.Next(0, 6); //Exclude diminished 7th
+        }
+
+        private void GetEmptyBar()
+        {
+            for (int i = 0; i < generator.number_of_ticks_per_bar; i++)
+            {
+                notes.Add(0);
+            }
         }
 
         public List<int> GetTicks(int number_of_ticks_per_bar)

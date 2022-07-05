@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 using System.Threading;
+using M;
+using System.IO;
 
 namespace project_e
 {
@@ -54,7 +56,146 @@ namespace project_e
             int r = midiOutShortMsg(handle, message);
         }
 
-        public async void PlayBar()
+        public void PlayBars()
+        {
+            mw.BassNotes.Items.Clear();
+
+            foreach (Bar bar in bars)
+            {
+                string list_text = (bar.bass + 1).ToString() + "  ";
+
+                foreach (int tick in bar.notes)
+                {
+                    if (tick > 0)
+                        list_text += "O";
+                    else
+                        list_text += "-";
+                }
+
+                mw.BassNotes.Items.Add(list_text);
+            }
+
+            MidiFile mf;
+
+            using (Stream stm = File.OpenRead(@"C:\Users\jakeb\Downloads\Landslide.mid"))
+                mf = M.MidiFile.ReadFrom(stm);
+
+
+            var result = mf.Clone();
+
+            //Begin to modify
+            result = RemoveEvents(result);
+            result = AddEvents(result);
+            result = result.AdjustTempo((double)tempo);
+
+
+            using (var stm = File.OpenWrite(@"C:\Users\jakeb\Downloads\song.mid"))
+            {
+                stm.SetLength(0);
+                result.WriteTo(stm);
+            }
+
+            System.Diagnostics.Process.Start(@"C:\Users\jakeb\Downloads\song.mid");
+        }
+
+        private M.MidiFile RemoveEvents(M.MidiFile result)
+        {
+            //Track 0
+            List<M.MidiEvent> new_events = new List<M.MidiEvent>();
+            foreach (M.MidiEvent e in result.Tracks[0].Events)
+            {
+                if (e.Message.Status != 144)
+                    new_events.Add(e);
+            }
+
+            result.Tracks[0].Events.Clear();
+
+            foreach (M.MidiEvent e in new_events)
+            {
+                result.Tracks[0].Events.Add(e);
+            }
+
+            //Track 1
+            new_events.Clear();
+
+            foreach (M.MidiEvent e in result.Tracks[1].Events)
+            {
+                if (e.Message.Status != 144)
+                    new_events.Add(e);
+            }
+
+            result.Tracks[1].Events.Clear();
+
+            foreach (M.MidiEvent e in new_events)
+            {
+                result.Tracks[1].Events.Add(e);
+            }
+
+
+            return result;
+        }
+
+        private M.MidiFile AddEvents(M.MidiFile result)
+        {
+            List<byte> waiting_to_turn_off = new List<byte>();
+            int prev_note_tick = 1;
+            IList<M.MidiEvent> track_events = result.Tracks[0].Events;
+
+            for(int bar_number = 0; bar_number < bars.Count; bar_number++)
+            {
+                for (int tick = 0; tick < number_of_ticks_per_bar; tick++)
+                {
+                    int absolute_tick = number_of_ticks_per_bar * bar_number + tick;
+                    int delay = (int)((absolute_tick - prev_note_tick) / (double)number_of_ticks_per_bar * time_signature_top * result.TimeBase); //How long to wait until next event
+
+                    List<M.MidiEvent> turn_off_events = TurnOffNotesInTrack(waiting_to_turn_off, delay);
+                    waiting_to_turn_off.Clear();
+
+                    if (turn_off_events.Count > 0)
+                        delay = 0;
+
+                    foreach (M.MidiEvent e in turn_off_events)
+                        track_events.Insert(track_events.Count - 1, e); //Insert right before end of file
+
+                    int midi = bars[bar_number].notes[tick];
+                    byte velocity = 100;
+
+
+                    M.MidiMessage message = new M.MidiMessageNoteOn((byte)midi, velocity, 0);
+                    M.MidiEvent ev = new M.MidiEvent(delay, message);
+
+                    track_events.Insert(track_events.Count - 1, ev); //Insert right before end of file
+
+                    waiting_to_turn_off.Add((byte)midi);
+
+                    prev_note_tick = absolute_tick;
+
+                    delay = 0;
+                }
+            }
+
+            return result;
+        }
+
+        private List<M.MidiEvent> TurnOffNotesInTrack(List<byte> notes, int delay)
+        {
+            List<M.MidiEvent> events = new List<M.MidiEvent>();
+
+            for (int i = 0; i < notes.Count; i++)
+            {
+                byte turn_off_value = notes[i];
+                M.MidiMessage turn_off_message = new M.MidiMessageNoteOn(turn_off_value, 0, 0);
+                M.MidiEvent turn_off_event = new M.MidiEvent(delay, turn_off_message);
+                events.Add(turn_off_event);
+
+                delay = 0;
+            }
+
+            return events;
+        }
+
+        /*
+        public async void PlayBars()
         {
             double sleep = (double)time_signature_top / (double)tempo * 60.0 * 1000.0 / (double)number_of_ticks_per_bar;
 
@@ -100,18 +241,21 @@ namespace project_e
                 });
 
             }
-        }
+        }*/
 
         public void NextBar()
         {
             bars = new List<Bar>();
+
 
             for(int i = 0; i < number_of_bars; i++)
             {
                 bars.Add(new Bar(this));
             }
 
-            PlayBar();
+            bars.Add(new Bar(this, Bar.Type.Empty));
+
+            PlayBars();
         }
 
     }

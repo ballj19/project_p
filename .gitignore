@@ -1,5 +1,7 @@
 project_p/bin/
 project_p/obj/
+project_e/bin/
+project_e/obj/
 .vs/
 Midi/bin/
 Midi/obj/

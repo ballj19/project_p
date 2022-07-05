@@ -48,6 +48,7 @@ namespace project_e
         {
             //r = new SongRandomizer(int.Parse(NumberOfBars.SelectedValue.ToString()), int.Parse(BiggestNoteHop.SelectedValue.ToString()), int.Parse(Tempo.Text));
             g.SetParams(int.Parse(NumberOfBars.SelectedValue.ToString()), int.Parse(BiggestNoteHop.SelectedValue.ToString()), int.Parse(Tempo.Text), int.Parse(NumberOfNotes.Text));
+            g.NextBar();
         }
 
         private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -55,7 +56,7 @@ namespace project_e
             if (e.Key == Key.Space)
                 g.NextBar();
             if (e.Key == Key.R)
-                g.PlayBar();
+                g.PlayBars();
         }
 
 
