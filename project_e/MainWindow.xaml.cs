@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
 using project_p;
+using System.IO;
 
 namespace project_e
 {
@@ -38,7 +39,7 @@ namespace project_e
             g.Generate(1, 4, 1);
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
+        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == Key.Space)
                 g.Generate(1, 4, 1);
@@ -54,20 +55,11 @@ namespace project_e
 
         private void ImportFileButton_Click(object sender, RoutedEventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            SongImporter si = new SongImporter();
+
+            foreach (string filepath in Directory.GetFiles(@"C:\Users\ballj\Downloads\project_e"))
             {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    string filePath = openFileDialog.FileName;
-
-                    SongImporter si = new SongImporter(filePath);
-                }
+                si.Import(filepath);
             }
         }
     }
