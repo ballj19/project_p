@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using M;
 using System.IO;
+using System.Windows.Forms;
 
 namespace project_e
 {
@@ -18,7 +20,7 @@ namespace project_e
         public int time_signature_bottom = 4;
         public int max_notes;
         public int number_of_bars;
-        public int biggest_hop;
+        public IList intervals;
         public int tempo;
         public Random r = new Random();
 
@@ -42,11 +44,11 @@ namespace project_e
             int result = midiOutOpen(ref handle, 0, null, 0, 0);
         }
 
-        public void SetParams(int b, int h, int t, int n)
+        public void SetParams(int b, IList i, int t, int n)
         {
             max_notes = n;
             number_of_bars = b;
-            biggest_hop = h;
+            intervals = i;
             tempo = t;
         }
 
@@ -62,7 +64,7 @@ namespace project_e
 
             foreach (Bar bar in bars)
             {
-                string list_text = (bar.bass + 1).ToString() + "  ";
+                string list_text = (bar.first_melody + 1).ToString() + "  ";
 
                 foreach (int tick in bar.notes)
                 {

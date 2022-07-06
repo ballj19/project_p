@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Windows.Controls;
 
 namespace project_e
 {
@@ -18,7 +19,7 @@ namespace project_e
 
         Generator generator;
 
-        public int bass;
+        public int first_melody = 0;
         List<int> notes_in_key = new List<int>();
         int note_location = 0;
         int starting_note = 60;
@@ -46,6 +47,9 @@ namespace project_e
 
             List<int> ticks = GetTicks(generator.number_of_ticks_per_bar);
 
+            first_melody = generator.r.Next(0, 7);
+
+            note_location += first_melody;
 
             for (int i = 0; i < generator.number_of_ticks_per_bar; i++)
             {
@@ -54,7 +58,30 @@ namespace project_e
                 if (ticks.Contains(i))
                 {
                     notes.Add(midi);
-                    note_location += generator.r.Next(-1 * generator.biggest_hop, generator.biggest_hop + 1);
+
+                    bool next_note_found = false;
+
+                    while(!next_note_found)
+                    {
+                        int hop_index = generator.r.Next(0, generator.intervals.Count);
+                        ListBoxItem item = generator.intervals[hop_index] as ListBoxItem;
+
+                        int reverse = generator.r.Next(0, 2);
+
+                        int next_note;
+
+                        if (reverse > 0)
+                            next_note = midi + (int)item.Tag;
+                        else
+                            next_note = midi - (int)item.Tag;
+
+
+                        if (notes_in_key.Contains(next_note))
+                        {
+                            next_note_found = true;
+                            note_location = notes_in_key.IndexOf(next_note);
+                        }
+                    }
                 }
                 else
                 {
@@ -62,7 +89,6 @@ namespace project_e
                 }
             }
 
-            bass = generator.r.Next(0, 6); //Exclude diminished 7th
         }
 
         private void GetEmptyBar()

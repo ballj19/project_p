@@ -10,14 +10,14 @@
     <Grid>
         <Button x:Name="Generate" Content="Generate" HorizontalAlignment="Left" Margin="715,404,0,0" VerticalAlignment="Top" Width="75" Click="Generate_Click"/>
         <Button x:Name="ImportFile" Content="Import" HorizontalAlignment="Left" Margin="10,404,0,0" VerticalAlignment="Top" Width="75" Click="ImportFileButton_Click"/>
-        <ComboBox x:Name="BiggestNoteHop" HorizontalAlignment="Left" Margin="715,351,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Biggest Hop" HorizontalAlignment="Left" Margin="715,320,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="NumberOfBars" HorizontalAlignment="Left" Margin="630,351,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="# of Bars" HorizontalAlignment="Left" Margin="639,320,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="Tempo" HorizontalAlignment="Left" Margin="630,404,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="75"/>
         <Label  Content="Tempo" HorizontalAlignment="Left" Margin="645,378,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="NumberOfNotes" HorizontalAlignment="Left" Margin="543,351,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="# of Notes" HorizontalAlignment="Left" Margin="552,320,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="NumberOfNotes" HorizontalAlignment="Left" Margin="713,350,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="# of Notes" HorizontalAlignment="Left" Margin="717,319,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="BassNotes" HorizontalAlignment="Left" Height="100" Margin="360,135,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="Intervals" HorizontalAlignment="Left" Height="250" Margin="723,60,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="Intervals" HorizontalAlignment="Left" Margin="729,26,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

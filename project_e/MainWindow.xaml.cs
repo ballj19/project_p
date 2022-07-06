@@ -34,11 +34,24 @@ namespace project_e
             {
                 NumberOfNotes.Items.Add(i);
                 NumberOfBars.Items.Add(i);
-                BiggestNoteHop.Items.Add(i);
             }
 
+            Intervals.SelectionMode = System.Windows.Controls.SelectionMode.Multiple;
+            
+            Intervals.Items.Add(new ListBoxItem { Content = "0", Tag = 0 });
+            Intervals.Items.Add(new ListBoxItem { Content = "m2", Tag = 1 });
+            Intervals.Items.Add(new ListBoxItem { Content = "M2", Tag = 2 });
+            Intervals.Items.Add(new ListBoxItem { Content = "m3", Tag = 3 });
+            Intervals.Items.Add(new ListBoxItem { Content = "M3", Tag = 4 });
+            Intervals.Items.Add(new ListBoxItem { Content = "P4", Tag = 5 });
+            Intervals.Items.Add(new ListBoxItem { Content = "P5", Tag = 7 });
+            Intervals.Items.Add(new ListBoxItem { Content = "m6", Tag = 8 });
+            Intervals.Items.Add(new ListBoxItem { Content = "M6", Tag = 9 });
+            Intervals.Items.Add(new ListBoxItem { Content = "m7", Tag = 10 });
+            Intervals.Items.Add(new ListBoxItem { Content = "M7", Tag = 11 });
+            Intervals.Items.Add(new ListBoxItem { Content = "P8", Tag = 12 });
+
             NumberOfBars.SelectedIndex = 0;
-            BiggestNoteHop.SelectedIndex = 0;
             NumberOfNotes.SelectedIndex = 1;
 
             g = new Generator(this);
@@ -46,8 +59,11 @@ namespace project_e
 
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
+            var list = Intervals.SelectedItems;
+
+
             //r = new SongRandomizer(int.Parse(NumberOfBars.SelectedValue.ToString()), int.Parse(BiggestNoteHop.SelectedValue.ToString()), int.Parse(Tempo.Text));
-            g.SetParams(int.Parse(NumberOfBars.SelectedValue.ToString()), int.Parse(BiggestNoteHop.SelectedValue.ToString()), int.Parse(Tempo.Text), int.Parse(NumberOfNotes.Text));
+            g.SetParams(int.Parse(NumberOfBars.SelectedValue.ToString()), Intervals.SelectedItems, int.Parse(Tempo.Text), int.Parse(NumberOfNotes.Text));
             g.NextBar();
         }
 
