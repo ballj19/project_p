@@ -8,7 +8,12 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using M;
 using System.IO;
+<<<<<<< Updated upstream
 using System.Windows.Forms;
+=======
+using System.Diagnostics;
+
+>>>>>>> Stashed changes
 
 namespace project_e
 {
@@ -37,6 +42,9 @@ namespace project_e
 
         [DllImport("winmm.dll")]
         protected static extern int midiOutShortMsg(int handle, int message);
+
+        [DllImport("user32.dll")]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
 
         public Generator(MainWindow mw)
         {
@@ -79,7 +87,7 @@ namespace project_e
 
             MidiFile mf;
 
-            using (Stream stm = File.OpenRead(@"C:\Users\jakeb\Downloads\Landslide.mid"))
+            using (Stream stm = File.OpenRead(@"C:\Users\ballj\Downloads\Landslide.mid"))
                 mf = M.MidiFile.ReadFrom(stm);
 
 
@@ -91,13 +99,27 @@ namespace project_e
             result = result.AdjustTempo((double)tempo);
 
 
-            using (var stm = File.OpenWrite(@"C:\Users\jakeb\Downloads\song.mid"))
+            using (var stm = File.OpenWrite(@"C:\Users\ballj\Downloads\song.mid"))
             {
                 stm.SetLength(0);
                 result.WriteTo(stm);
             }
 
-            System.Diagnostics.Process.Start(@"C:\Users\jakeb\Downloads\song.mid");
+            System.Diagnostics.Process.Start( @"C:\Users\ballj\Downloads\song.mid");
+
+            SetForegroundWindow(WinGetHandle("Pianoteq"));
+            System.Windows.Forms.SendKeys.SendWait(" ");
+            Thread.Sleep(1000);
+            SetForegroundWindow(WinGetHandle("MainWindow"));
+        }
+
+        public static IntPtr WinGetHandle(string wName)
+        {
+            foreach (Process pList in Process.GetProcesses())
+                if (pList.MainWindowTitle.Contains(wName))
+                    return pList.MainWindowHandle;
+
+            return IntPtr.Zero;
         }
 
         private M.MidiFile RemoveEvents(M.MidiFile result)
