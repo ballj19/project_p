@@ -63,7 +63,7 @@ namespace project_e
 
 
             //r = new SongRandomizer(int.Parse(NumberOfBars.SelectedValue.ToString()), int.Parse(BiggestNoteHop.SelectedValue.ToString()), int.Parse(Tempo.Text));
-            g.SetParams(int.Parse(NumberOfBars.SelectedValue.ToString()), Intervals.SelectedItems, int.Parse(Tempo.Text), int.Parse(NumberOfNotes.Text));
+            g.SetParams(int.Parse(NumberOfBars.SelectedValue.ToString()), Intervals.SelectedItems, int.Parse(Tempo.Text), int.Parse(NumberOfNotes.Text), ExactNumberOfNotes.IsChecked == true);
             g.NextBar();
         }
 

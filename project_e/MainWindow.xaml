@@ -19,5 +19,6 @@
         <ListBox x:Name="BassNotes" HorizontalAlignment="Left" Height="100" Margin="360,135,0,0" VerticalAlignment="Top" Width="100"/>
         <ListBox x:Name="Intervals" HorizontalAlignment="Left" Height="250" Margin="723,60,0,0" VerticalAlignment="Top" Width="65"/>
         <Label Content="Intervals" HorizontalAlignment="Left" Margin="729,26,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="ExactNumberOfNotes" Content="" HorizontalAlignment="Left" Margin="797,354,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

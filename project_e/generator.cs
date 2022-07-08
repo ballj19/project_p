@@ -19,6 +19,7 @@ namespace project_e
         public int time_signature_top = 4;
         public int time_signature_bottom = 4;
         public int max_notes;
+        public bool exact_number_of_notes;
         public int number_of_bars;
         public IList intervals;
         public int tempo;
@@ -44,12 +45,13 @@ namespace project_e
             int result = midiOutOpen(ref handle, 0, null, 0, 0);
         }
 
-        public void SetParams(int b, IList i, int t, int n)
+        public void SetParams(int b, IList i, int t, int n, bool e)
         {
             max_notes = n;
             number_of_bars = b;
             intervals = i;
             tempo = t;
+            exact_number_of_notes = e;
         }
 
         private void Play(byte note, byte velocity = 0x7F)
