@@ -101,7 +101,12 @@ namespace project_e
 
         public List<int> GetTicks(int number_of_ticks_per_bar)
         {
-            int number_of_notes = generator.r.Next(2, generator.max_notes + 1);
+            int number_of_notes;
+
+            if (generator.exact_number_of_notes)
+                number_of_notes = generator.max_notes;
+            else
+               number_of_notes = generator.r.Next(2, generator.max_notes + 1);
 
             List<int> ticks = new List<int>();
 
