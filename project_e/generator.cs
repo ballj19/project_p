@@ -8,12 +8,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using M;
 using System.IO;
-<<<<<<< Updated upstream
-using System.Windows.Forms;
-=======
 using System.Diagnostics;
-
->>>>>>> Stashed changes
 
 namespace project_e
 {

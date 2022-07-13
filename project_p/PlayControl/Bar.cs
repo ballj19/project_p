@@ -33,7 +33,7 @@ namespace project_p
                     {
 
                         byte midi = Byte.Parse(note.SelectSingleNode("Number").InnerText);
-                        int velocity = note.SelectSingleNode("Type").InnerText == "Melody" ? 115 : 90;
+                        int velocity = note.SelectSingleNode("Type").InnerText == "Melody" ? 115 : 65;
 
                         player.Play(midi, (byte)velocity);
                     }

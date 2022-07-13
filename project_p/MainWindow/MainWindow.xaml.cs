@@ -23,9 +23,9 @@ namespace project_p
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int key_signature_offset = 14; //D
+        public int key_signature_offset = 19; //G
 
-        public string filepath = @"C:\Users\" + Environment.UserName + @"\source\repos\project_p\project_p\songs\Iris.xml";
+        public string filepath = @"C:\Users\ballj\source\repos\project_p\project_p\songs\Shallow.xml";
 
         public MainWindow()
         {

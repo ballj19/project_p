@@ -18,7 +18,7 @@ namespace project_p
 
             M.MidiFile mf;
 
-            using (Stream stm = File.OpenRead(@"C:\Users\Jake\Downloads\Landslide.mid"))
+            using (Stream stm = File.OpenRead(@"C:\Users\ballj\Downloads\Landslide.mid"))
                 mf = M.MidiFile.ReadFrom(stm);
 
 
@@ -30,13 +30,13 @@ namespace project_p
             result = result.AdjustTempo((double)player.bpm);
 
 
-            using (var stm = File.OpenWrite(@"C:\Users\Jake\Downloads\song.mid"))
+            using (var stm = File.OpenWrite(@"C:\Users\ballj\Downloads\song.mid"))
             {
                 stm.SetLength(0);
                 result.WriteTo(stm);
             }
 
-            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Synthesia\Synthesia.exe", @"C:\Users\Jake\Downloads\song.mid");
+            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Synthesia\Synthesia.exe", @"C:\Users\ballj\Downloads\song.mid");
         }
 
         private M.MidiFile RemoveEvents(M.MidiFile result)
@@ -132,7 +132,7 @@ namespace project_p
                                 if(t == track)
                                 {
                                     byte midi = Byte.Parse(note.SelectSingleNode("Number").InnerText);
-                                    byte velocity = note.SelectSingleNode("Type").InnerText == "Melody" ? (byte)115 : (byte)90;
+                                    byte velocity = note.SelectSingleNode("Type").InnerText == "Melody" ? (byte)115 : (byte)65;
 
 
                                     M.MidiMessage message = new M.MidiMessageNoteOn(midi, velocity, 0);
