@@ -432,7 +432,7 @@
         </Note>
         <Note>
           <Type>Melody</Type>
-          <Number>52</Number>
+          <Number>50</Number>
         </Note>
         <Note>
           <Type>Melody</Type>
@@ -476,14 +476,6 @@
         </Note>
       </Tick9>
       <Tick11>
-        <Note>
-          <Type>Bass</Type>
-          <Number>50</Number>
-        </Note>
-        <Note>
-          <Type>Melody</Type>
-          <Number>54</Number>
-        </Note>
         <Note>
           <Type>Melody</Type>
           <Number>57</Number>
@@ -806,6 +798,14 @@
         </Note>
         <Note>
           <Type>Melody</Type>
+          <Number>64</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>69</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
           <Number>72</Number>
         </Note>
       </Tick1>
@@ -813,6 +813,14 @@
         <Note>
           <Type>Bass</Type>
           <Number>52</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>64</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>69</Number>
         </Note>
         <Note>
           <Type>Melody</Type>
@@ -826,6 +834,14 @@
         </Note>
         <Note>
           <Type>Melody</Type>
+          <Number>64</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>69</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
           <Number>72</Number>
         </Note>
       </Tick5>
@@ -833,6 +849,14 @@
         <Note>
           <Type>Bass</Type>
           <Number>59</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>64</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>69</Number>
         </Note>
         <Note>
           <Type>Melody</Type>
@@ -847,21 +871,38 @@
         </Note>
         <Note>
           <Type>Melody</Type>
+          <Number>64</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>69</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
           <Number>71</Number>
         </Note>
       </Tick11>
       <Tick13 />
-      <Tick15 />
+      <Tick15>
+        <Note>
+          <Type>Melody</Type>
+          <Number>62</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>66</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>69</Number>
+        </Note>
+      </Tick15>
     </Bar17>
     <Bar18>
       <Tick1>
         <Note>
           <Type>Bass</Type>
           <Number>42</Number>
-        </Note>
-        <Note>
-          <Type>Melody</Type>
-          <Number>69</Number>
         </Note>
       </Tick1>
       <Tick3>
@@ -883,6 +924,14 @@
         </Note>
       </Tick7>
       <Tick9>
+        <Note>
+          <Type>Melody</Type>
+          <Number>62</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>66</Number>
+        </Note>
         <Note>
           <Type>Melody</Type>
           <Number>69</Number>
@@ -910,6 +959,14 @@
         </Note>
         <Note>
           <Type>Melody</Type>
+          <Number>62</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>67</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
           <Number>71</Number>
         </Note>
       </Tick1>
@@ -917,6 +974,14 @@
         <Note>
           <Type>Bass</Type>
           <Number>50</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>62</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>67</Number>
         </Note>
         <Note>
           <Type>Melody</Type>
@@ -930,10 +995,26 @@
         </Note>
         <Note>
           <Type>Melody</Type>
+          <Number>62</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>67</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
           <Number>71</Number>
         </Note>
       </Tick5>
       <Tick7>
+        <Note>
+          <Type>Melody</Type>
+          <Number>62</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>67</Number>
+        </Note>
         <Note>
           <Type>Melody</Type>
           <Number>74</Number>
@@ -952,6 +1033,10 @@
       <Tick11>
         <Note>
           <Type>Melody</Type>
+          <Number>62</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
           <Number>69</Number>
         </Note>
       </Tick11>
@@ -966,6 +1051,14 @@
         </Note>
         <Note>
           <Type>Melody</Type>
+          <Number>59</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>64</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
           <Number>67</Number>
         </Note>
       </Tick1>
@@ -973,6 +1066,14 @@
         <Note>
           <Type>Bass</Type>
           <Number>47</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>59</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>64</Number>
         </Note>
         <Note>
           <Type>Melody</Type>
@@ -984,6 +1085,14 @@
         <Note>
           <Type>Bass</Type>
           <Number>52</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>59</Number>
+        </Note>
+        <Note>
+          <Type>Melody</Type>
+          <Number>64</Number>
         </Note>
         <Note>
           <Type>Melody</Type>
