@@ -18,7 +18,7 @@ namespace project_p
 
             M.MidiFile mf;
 
-            using (Stream stm = File.OpenRead(@"C:\Users\ballj\Downloads\Landslide.mid"))
+            using (Stream stm = File.OpenRead(@"C:\Users\jakeb\Downloads\Landslide.mid"))
                 mf = M.MidiFile.ReadFrom(stm);
 
 
@@ -30,13 +30,13 @@ namespace project_p
             result = result.AdjustTempo((double)player.bpm);
 
 
-            using (var stm = File.OpenWrite(@"C:\Users\ballj\Downloads\song.mid"))
+            using (var stm = File.OpenWrite(@"C:\Users\jakeb\Downloads\song.mid"))
             {
                 stm.SetLength(0);
                 result.WriteTo(stm);
             }
 
-            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Synthesia\Synthesia.exe", @"C:\Users\ballj\Downloads\song.mid");
+            System.Diagnostics.Process.Start(@"C:\Users\jakeb\Downloads\song.mid");
         }
 
         private M.MidiFile RemoveEvents(M.MidiFile result)
@@ -94,6 +94,7 @@ namespace project_p
             List<byte> waiting_to_turn_off = new List<byte>();
             int prev_note_tick = 1;
             IList<M.MidiEvent> track_events = result.Tracks[track].Events;
+            int ticks_per_bar = 4 * player.time_signature_top;
 
             foreach (XmlNode b in bars)
             {
@@ -101,11 +102,11 @@ namespace project_p
 
                 if (bar_number < int.Parse(ExportStart.Text) || bar_number > int.Parse(ExportEnd.Text))
                 {
-                    prev_note_tick += 16;
+                    prev_note_tick += ticks_per_bar;
                     continue;
                 }
 
-                for (int tick = 1; tick <= 16; tick++)
+                for (int tick = 1; tick <= ticks_per_bar; tick++)
                 {
                     XmlNode tick_node = b.SelectSingleNode("Tick" + tick);
 
@@ -113,8 +114,8 @@ namespace project_p
                     {
                         if (TrackExistsInTick(track, tick_node))
                         {
-                            int absolute_tick = 16 * (bar_number - 1) + tick;
-                            int delay = (int)((absolute_tick - prev_note_tick) / 16d * player.time_signature_top * result.TimeBase); //How long to wait until next event
+                            int absolute_tick = ticks_per_bar * (bar_number - 1) + tick;
+                            int delay = (int)((absolute_tick - prev_note_tick) / (double)ticks_per_bar * player.time_signature_top * result.TimeBase); //How long to wait until next event
 
                             List<M.MidiEvent> turn_off_events = TurnOffNotesInTrack(track, waiting_to_turn_off, delay);
                             waiting_to_turn_off.Clear();

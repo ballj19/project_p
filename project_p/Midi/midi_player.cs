@@ -42,9 +42,9 @@ namespace project_p
         private int handle = 0;
         MidiFile file;
 
-        public int bpm = 100;
+        public int bpm = 71;
+        public int time_signature_top = 3;
         public int time_signature_bottom = 4;
-        public int time_signature_top = 4;
 
         int rightIterator = 0;
         List<List<byte>> rightNotes = new List<List<byte>>();
