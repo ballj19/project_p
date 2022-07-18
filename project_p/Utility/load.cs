@@ -11,7 +11,7 @@ namespace project_p
 {
     public partial class MainWindow
     {
-        private void LoadBar()
+        public void LoadBar()
         {   
             Timeline.Children.Clear();
 
@@ -21,7 +21,7 @@ namespace project_p
             XmlDocument doc = new XmlDocument();
             doc.Load(filepath);
 
-            XmlNode bar = doc.DocumentElement.SelectSingleNode("//Bars/Bar" + int.Parse(BarNumber.Text));
+            XmlNode bar = doc.DocumentElement.SelectSingleNode("//Bars/Bar" + int.Parse(BarNumber.Text) + "/Ticks");
 
             if(bar != null)
             {

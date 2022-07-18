@@ -29,7 +29,7 @@ namespace project_p
                 Width = 20,
                 Height = 20,
                 VerticalAlignment = VerticalAlignment.Top,
-                Margin = new Thickness(50, 20, 0, 0)
+                Margin = new Thickness(5, 20, 0, 0)
             };
 
             delete = new Button

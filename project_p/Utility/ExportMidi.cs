@@ -108,7 +108,7 @@ namespace project_p
 
                 for (int tick = 1; tick <= ticks_per_bar; tick++)
                 {
-                    XmlNode tick_node = b.SelectSingleNode("Tick" + tick);
+                    XmlNode tick_node = b.SelectSingleNode("Ticks/Tick" + tick);
 
                     if (tick_node != null)
                     {

@@ -46,17 +46,28 @@ namespace project_p
             XmlNode current_bar = doc.SelectSingleNode("//Bars/Bar" + BarNumber.Text);
 
             if (current_bar == null)
-                current_bar = doc.CreateElement("", "Bar" + BarNumber.Text, "");
+            {
+                current_bar = doc.CreateElement("", "Bar" + BarNumber.Text + "", "");
+                bars.AppendChild(current_bar);
+            }
 
-            current_bar.RemoveAll();
+            XmlNode ticks = doc.SelectSingleNode("//Bars/Bar" + BarNumber.Text + "/Ticks");
+
+            if (ticks == null)
+                ticks = doc.CreateElement("", "Ticks", "");
+
+            ticks.RemoveAll();
 
             foreach (PianoControl p in Timeline.Children)
             {
                 XmlElement tick_xml = p.Save(doc);
-                current_bar.AppendChild(tick_xml);
+                ticks.AppendChild(tick_xml);
             }
 
-            bars.InsertAt(current_bar, int.Parse(BarNumber.Text) - 1);
+            current_bar.AppendChild(ticks);
+
+            //bars.InsertAt(current_bar, int.Parse(BarNumber.Text) - 1);
+            
 
             doc.Save(filepath);
         }

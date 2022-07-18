@@ -19,16 +19,11 @@
     </Bar1>
     <Bar2>
       <Chord>1</Chord>
-      <OctaveStart>1</OctaveStart>
-      <Synchopate>1</Synchopate>
-      <Together>0</Together>
-      <Seventh>0</Seventh>
-      <Ninth>0</Ninth>
       <Ticks>
         <Tick1>
           <Note>
             <Type>Bass</Type>
-            <Number>36</Number>
+            <Number>48</Number>
           </Note>
           <Note>
             <Type>Melody</Type>
@@ -42,7 +37,7 @@
         <Tick3>
           <Note>
             <Type>Bass</Type>
-            <Number>43</Number>
+            <Number>55</Number>
           </Note>
         </Tick3>
         <Tick5>
@@ -58,7 +53,7 @@
         <Tick7>
           <Note>
             <Type>Bass</Type>
-            <Number>48</Number>
+            <Number>64</Number>
           </Note>
         </Tick7>
         <Tick9>
@@ -74,18 +69,13 @@
         <Tick11>
           <Note>
             <Type>Bass</Type>
-            <Number>55</Number>
+            <Number>60</Number>
           </Note>
         </Tick11>
       </Ticks>
     </Bar2>
     <Bar3>
       <Chord>5</Chord>
-      <OctaveStart>1</OctaveStart>
-      <Synchopate>1</Synchopate>
-      <Together>0</Together>
-      <Seventh>1</Seventh>
-      <Ninth>0</Ninth>
       <Ticks>
         <Tick1>
           <Note>
@@ -139,11 +129,6 @@
     </Bar3>
     <Bar4>
       <Chord>5</Chord>
-      <OctaveStart>2</OctaveStart>
-      <Synchopate>0</Synchopate>
-      <Together>0</Together>
-      <Seventh>1</Seventh>
-      <Ninth>0</Ninth>
       <Ticks>
         <Tick1>
           <Note>

@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace project_p
 {
-    class MidiPlayer
+    public class MidiPlayer
     {
         public enum Hand{
             Right,
@@ -42,8 +42,8 @@ namespace project_p
         private int handle = 0;
         MidiFile file;
 
-        public int bpm = 71;
-        public int time_signature_top = 3;
+        public int bpm = 100;
+        public int time_signature_top = 4;
         public int time_signature_bottom = 4;
 
         int rightIterator = 0;

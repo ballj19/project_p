@@ -38,7 +38,7 @@ namespace project_p
 
             int length_of_bar = midi_file.TicksPerQuarterNote * 4;
 
-            int number_of_bars = melody.MidiEvents.Last().Time / length_of_bar;
+            int number_of_bars = melody.MidiEvents.Last().Time / length_of_bar + 1;
 
             int[,] notes =  new int[number_of_bars, 16];
 
@@ -72,6 +72,8 @@ namespace project_p
             for (int i = 0; i < notes.GetLength(0); i++)
             {
                 XmlElement bar = doc.CreateElement("", "Bar" + (i + 1), "");
+                XmlElement ticks = doc.CreateElement("", "Ticks", "");
+                bar.AppendChild(ticks);
 
                 for(int j = 0; j < notes.GetLength(1); j++)
                 {
@@ -93,7 +95,7 @@ namespace project_p
 
                         tick.AppendChild(note_element);
 
-                        bar.AppendChild(tick);
+                        ticks.AppendChild(tick);
                     }
                 }
 

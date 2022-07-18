@@ -23,9 +23,9 @@ namespace project_p
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int key_signature_offset = 21; //G
+        public int key_signature_offset = 12; //C
 
-        public string filepath = @"C:\Users\jakeb\source\repos\project_p\project_p\songs\Im_With_You.xml";
+        public string filepath = @"C:\Users\jakeb\source\repos\project_p\project_p\songs\Mary_Had_A_Little_Lamb.xml";
 
         public MainWindow()
         {
@@ -36,7 +36,9 @@ namespace project_p
 
             LoadBar();
 
-            if(Timeline.Children.Count > 1)
+            FillBarBuilder();
+
+            if (Timeline.Children.Count > 1)
                 SortTicks();
 
             BarNumber.LostFocus += BarNumber_LostFocus;
@@ -127,6 +129,11 @@ namespace project_p
             return AddTick(t);
         }
 
+        public bool TickHasMelody(int t)
+        {
+            return GetTick(t).HasMelody();
+        }
+
         public PianoControl AddTick(int t)
         {
             PianoControl p = new PianoControl();
@@ -212,5 +219,23 @@ namespace project_p
                 GetTick(i);
             }
         }
+
+        private void FillBarBuilder()
+        {
+            if (!File.Exists(filepath))
+                CreateSaveFile();
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(filepath);
+
+            XmlNodeList bars = doc.DocumentElement.SelectNodes("//Bars/*[starts-with(name(), 'Bar')]");
+
+            foreach (XmlNode bar in bars)
+            {
+                BarBuilder bb = new BarBuilder(this, bar);
+                BarBuilder.Children.Add(bb);
+            }
+        }
+
     }
 }

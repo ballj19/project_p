@@ -57,6 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BarBuilder\BarBuilder.cs" />
     <Compile Include="BassBuilder\bass_builder.cs" />
     <Compile Include="PlayControl\Bar.cs" />
     <Compile Include="PlayControl\play_control.cs" />

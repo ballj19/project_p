@@ -24,7 +24,7 @@ namespace project_p
             
             foreach(XmlNode bar in bars)
             {
-                foreach (XmlNode tick in bar.ChildNodes)
+                foreach (XmlNode tick in bar.SelectNodes("Ticks/*"))
                 {
                     foreach (XmlNode note in tick.ChildNodes)
                     {
