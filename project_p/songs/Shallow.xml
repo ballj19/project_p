@@ -448,13 +448,13 @@
       <Tick5>
         <Note>
           <Type>Bass</Type>
-          <Number>52</Number>
+          <Number>55</Number>
         </Note>
       </Tick5>
       <Tick7>
         <Note>
           <Type>Bass</Type>
-          <Number>47</Number>
+          <Number>52</Number>
         </Note>
       </Tick7>
       <Tick9>
@@ -851,17 +851,18 @@
         </Note>
       </Tick11>
       <Tick13 />
-      <Tick15 />
+      <Tick15>
+        <Note>
+          <Type>Melody</Type>
+          <Number>69</Number>
+        </Note>
+      </Tick15>
     </Bar17>
     <Bar18>
       <Tick1>
         <Note>
           <Type>Bass</Type>
           <Number>42</Number>
-        </Note>
-        <Note>
-          <Type>Melody</Type>
-          <Number>69</Number>
         </Note>
       </Tick1>
       <Tick3>

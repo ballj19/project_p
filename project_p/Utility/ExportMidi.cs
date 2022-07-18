@@ -36,7 +36,8 @@ namespace project_p
                 result.WriteTo(stm);
             }
 
-            System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Synthesia\Synthesia.exe", @"C:\Users\ballj\Downloads\song.mid");
+            //System.Diagnostics.Process.Start(@"C:\Program Files (x86)\Synthesia\Synthesia.exe", @"C:\Users\ballj\Downloads\song.mid");
+            System.Diagnostics.Process.Start(@"C:\Users\ballj\Downloads\song.mid");
         }
 
         private M.MidiFile RemoveEvents(M.MidiFile result)
