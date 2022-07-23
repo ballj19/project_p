@@ -1,15 +1,3 @@
-<?php
-
-include_once 'drills.php';
-
-if(isset($_GET['n']))
-    $n = $_GET['n'];
-
-if((isset($n) && $n >= count($drills)) || !isset($_GET['n']))
-    $n = rand(0, count($drills) - 1);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,7 +5,7 @@ if((isset($n) && $n >= count($drills)) || !isset($_GET['n']))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Piano Drill <?php echo $n; ?></title>
+        <title>Piano Drills</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -28,17 +16,34 @@ if((isset($n) && $n >= count($drills)) || !isset($_GET['n']))
         <!-- SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .piano {
+                position: relative;
+            }
+            .piano-white {
+                padding: 0;
+                height: 150px;
+                position: absolute;
+                width: 25px;
+            }
+            .piano-black {
+                padding: 0;
+                height: 100px;
+                position: absolute;
+                width: 18px;
+            }
+        </style>
     </head>
     <body>
-
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-echo $drills[$n]->html();
-
-?>
-</body>
+        <header class="masthead bg-dark text-white">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="piano">
+                    <btn style="left: 27px;" class='btn btn-light piano-white'></btn>
+                    <btn class='btn btn-light piano-white'></btn>
+                    <btn style="left: 17px" class='btn btn-dark piano-black'></btn>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
