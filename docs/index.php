@@ -1,12 +1,28 @@
-<?php
+<?php 
 
-include_once 'drills.php';
+function sectionHtml($title, $path)
+{
+    $html = '<h2 style="padding-top: 50px;">' . $title . '</h2>';
 
-if(isset($_GET['n']))
-    $n = $_GET['n'];
+    $html .=    '<div class="row gx-4 gx-lg-5 h-100 text-center">';
+    
+    include_once "{$path}/drills/drills.php";
+    
+    $v = 0;
+    foreach($videos as $video)
+    {
+        
+        $html .=            "<div class='col-sm-auto'>";
+        $html .=                "<a href={$path}/drills?v={$v}&d=0><img style='margin-top: 50px' src='https://img.youtube.com/vi/{$video->id}/0.jpg'></a>";
+        $html .=            "</div>";
+    
+        $v++;
+    }
+    
+    $html .=    '</div>';
 
-if((isset($n) && $n >= count($drills)) || !isset($_GET['n']))
-    $n = rand(0, count($drills) - 1);
+    return $html;
+}
 
 ?>
 
@@ -17,7 +33,7 @@ if((isset($n) && $n >= count($drills)) || !isset($_GET['n']))
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Piano Drill <?php echo $n; ?></title>
+        <title>Piano Drills</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -28,17 +44,18 @@ if((isset($n) && $n >= count($drills)) || !isset($_GET['n']))
         <!-- SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../css/styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body>
+    <body class="bg-dark text-white" style="">
 
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 
-echo $drills[$n]->html();
+$html = '<div class="container px-4 px-lg-5" style="margin-bottom: 50px">';
 
-?>
-</body>
-</html>
+$html .= sectionHtml('Chords', 'chords');
+$html .= sectionHtml('Accompaniment', 'accompaniment');
+$html .= sectionHtml('Improv', 'improv');
+
+$html .= '</div>';
+
+echo $html;
