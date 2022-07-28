@@ -8,7 +8,7 @@ $videos = array();
 
 /*********************************************************************************************************************************/
 
-$video = new Video('oqU7-DrpGFY', 'Stop Playing Major Chords Like This!');
+$video = new Video('oqU7-DrpGFY');
 
 $drill = new Drill('Voicing the Major Chords.  Does not work on the 5th Chord.  Go to "Voicing the Dominant Chords" drill for the 5th chord.');
 $drill->setVideoTime('1:40', '5:18');

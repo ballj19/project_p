@@ -52,9 +52,11 @@ function sectionHtml($title, $path)
 
 $html = '<div class="container px-4 px-lg-5" style="margin-bottom: 50px">';
 
+$html .= sectionHtml('Patterns', 'patterns');
 $html .= sectionHtml('Chords', 'chords');
 $html .= sectionHtml('Accompaniment', 'accompaniment');
 $html .= sectionHtml('Improv', 'improv');
+$html .= sectionHtml('Boogie Woogie', 'boogie-woogie');
 
 $html .= '</div>';
 
