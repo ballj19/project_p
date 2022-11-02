@@ -42,8 +42,8 @@ namespace project_p
         private int handle = 0;
         MidiFile file;
 
-        public int bpm = 100;
-        public int time_signature_top = 4;
+        public int bpm = 155;
+        public int time_signature_top = 3;
         public int time_signature_bottom = 4;
 
         int rightIterator = 0;
@@ -169,7 +169,7 @@ namespace project_p
 
         public int NumberOfTicksPerBar()
         {
-            return 16 / time_signature_bottom * time_signature_top;
+            return (int) (16.0 * time_signature_top / time_signature_bottom);
         }
 
 
