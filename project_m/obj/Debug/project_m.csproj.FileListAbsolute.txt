@@ -1,0 +1,15 @@
+C:\Users\jakeb\source\repos\project_p\project_m\bin\Debug\project_m.exe.config
+C:\Users\jakeb\source\repos\project_p\project_m\bin\Debug\project_m.exe
+C:\Users\jakeb\source\repos\project_p\project_m\bin\Debug\project_m.pdb
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m.csprojAssemblyReference.cache
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\MainWindow.g.cs
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\App.g.cs
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m_MarkupCompile.cache
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m_MarkupCompile.lref
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\MainWindow.baml
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m.g.resources
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m.Properties.Resources.resources
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m.csproj.GenerateResource.cache
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m.csproj.CoreCompileInputs.cache
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m.exe
+C:\Users\jakeb\source\repos\project_p\project_m\obj\Debug\project_m.pdb
