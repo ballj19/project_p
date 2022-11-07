@@ -26,6 +26,9 @@ namespace project_m
         int time_signature_bottom = 4;
         int tick_divisions = 2;
 
+        List<Beat> beat;
+        List<int> progression;
+
         string filepath = @"C:\Users\jakeb\Documents\test.musicxml";
 
         public struct Note
@@ -35,20 +38,34 @@ namespace project_m
             public int octave;
             public int stave;
         }
+
+        public struct Beat
+        {
+            public int interval;
+            public int duration;
+        }
         
         private void GenerateBtn_Click(object sender, RoutedEventArgs e)
         {
+            Generate_Beat();
+            Generate_Chord_Progression();
+
             Generate_XML();
         }
 
         private Note Note_Plus_Interval(Note note,  int interval)
         {
-            //'C' = 0, B = '7'.  Wrap around after B.
-            char new_letter = (char)(note.letter + interval - 1);
-            
-            if(new_letter > 'G')
+            char new_letter = note.letter;
+
+            for (int i = 0; i < interval - 1; i++)
             {
-                new_letter = (char)(new_letter - 7);
+                new_letter++;
+
+                if (new_letter == 'C')
+                    note.octave++;
+
+                if (new_letter > 'G')
+                    new_letter = (char)(new_letter - 7);
             }
 
             note.letter = new_letter;
@@ -56,15 +73,42 @@ namespace project_m
             return note;
         }
 
-        private List<Note>  Generate_Beat(char letter)
+        private char GetLetterFromScaleNumber(int scale_number)
+        {
+            char letter = key_signature;
+
+            for (int i = 0; i < scale_number - 1; i++)
+            {
+                letter++;
+
+                if (letter > 'G')
+                    letter = (char)(letter - 7);
+            }
+
+            return letter;
+        }
+
+        private void Generate_Beat()
+        {
+            beat = new List<Beat>();
+
+            beat.Add(new Beat { interval = 1, duration = 2 });
+            beat.Add(new Beat { interval = 5, duration = 2 });
+            beat.Add(new Beat { interval = 8, duration = 2 });
+        }
+
+        private List<Note>  Generate_Bass(int progression_index)
         {
             List<Note> notes = new List<Note>();
 
-            Note base_note = new Note { letter = letter, duration = 2, octave = 3, stave = 2 };
-
-            notes.Add(base_note);
-            notes.Add(Note_Plus_Interval(base_note, 5));
-            notes.Add(Note_Plus_Interval(base_note, 8));
+            Note base_note = new Note { letter = GetLetterFromScaleNumber(progression_index), duration = 2, octave = 3, stave = 2 };
+            
+            foreach(Beat b in beat)
+            {
+                Note n = Note_Plus_Interval(base_note, b.interval);
+                n.duration = b.duration;
+                notes.Add(n);
+            }
 
             return notes;
         }
@@ -76,9 +120,9 @@ namespace project_m
             return notes;
         }
 
-        private List<int> Generate_Chord_Progression()
+        private void Generate_Chord_Progression()
         {
-            return new List<int>{ 1, 5, 6, 4};
+            progression = new List<int>{ 1, 5, 6, 4};
         }
 
         private XmlElement Generate_Measure_New_Attributes()
@@ -101,11 +145,11 @@ namespace project_m
             XmlElement beats = doc.CreateElement("", "beats", "");
             XmlText beats_text = doc.CreateTextNode(time_signature_top.ToString());
             beats.AppendChild(beats_text);
-            XmlElement beatstype = doc.CreateElement("", "beats-type", "");
+            XmlElement beattype = doc.CreateElement("", "beat-type", "");
             XmlText beatstype_text = doc.CreateTextNode(time_signature_bottom.ToString());
-            beatstype.AppendChild(beatstype_text);
+            beattype.AppendChild(beatstype_text);
             time.AppendChild(beats);
-            time.AppendChild(beatstype);
+            time.AppendChild(beattype);
             attributes.AppendChild(time);
 
             XmlElement staves = doc.CreateElement("", "staves", "");
@@ -221,8 +265,8 @@ namespace project_m
 
             if(number == 1)
                 measure.AppendChild(Generate_Measure_New_Attributes());
-
-            foreach(Note n in Generate_Beat('C'))
+                       
+            foreach(Note n in Generate_Bass(progression[number - 1]))
             {
                 measure.AppendChild(Note_To_XML(n));
             }
@@ -249,10 +293,17 @@ namespace project_m
             partlist.AppendChild(scorepart);
             score.AppendChild(partlist);
 
-            //XML Measures
             XmlElement part = doc.CreateElement("", "part", "");
             part.SetAttribute("id", "P1");
-            part.AppendChild(Generate_Measure_XML(1));
+
+            //XML Measures
+            for (int i = 1; i <= progression.Count; i++)
+            {
+
+                part.AppendChild(Generate_Measure_XML(i));
+
+            }
+
             score.AppendChild(part);
 
             //Save File
