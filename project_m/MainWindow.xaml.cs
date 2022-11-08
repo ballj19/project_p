@@ -18,8 +18,43 @@ namespace project_m
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+        List<int> midi_naturals = new List<int>() { 0, 2, 4, 5, 7, 9, 11 };
+        List<int> major_scale = new List<int>() { 0, 2, 2, 1, 2, 2, 2 };
+
+        public struct KeySignature
+        {
+            public char letter;
+            public Accidental accidental;
+        }
+
+        public struct TimeSignature
+        {
+            public int bpm;
+            public int top;
+            public int bottom;
+            public int tick_divisions;
+        }
+
+        KeySignature key_signature = new KeySignature
+        {
+            letter = 'C',
+            accidental = Accidental.Natural
+        };
+
+        TimeSignature time_signature = new TimeSignature
+        {
+            top = 4,
+            bottom = 4,
+            bpm = 100,
+            tick_divisions = 2
+        };
+
+        string filepath = @"C:\Users\jakeb\Documents\test.musicxml";
+
         public MainWindow()
         {
             InitializeComponent();
