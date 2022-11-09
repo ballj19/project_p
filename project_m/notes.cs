@@ -100,15 +100,18 @@ namespace project_m
         {
             char new_letter = note.letter;
             
-            for (int i = 0; i < interval - 1; i++)
+            for (int i = 0; i < Math.Abs(interval) - 1; i++)
             {
-                new_letter++;
+                new_letter = (char)(new_letter + Math.Sign(interval));
 
                 if (new_letter == 'C')
-                    note.octave++;
+                    note.octave += Math.Sign(interval);
 
                 if (new_letter > 'G')
-                    new_letter = (char)(new_letter - 7);
+                    new_letter = 'A';
+
+                if (new_letter < 'A')
+                    new_letter = 'G';
             }
 
             note.letter = new_letter;

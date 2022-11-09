@@ -22,6 +22,8 @@ namespace project_m
 
     public partial class MainWindow : Window
     {
+        Random rand = new Random();
+
         List<int> midi_naturals = new List<int>() { 0, 2, 4, 5, 7, 9, 11 };
         List<int> major_scale = new List<int>() { 0, 2, 2, 1, 2, 2, 2 };
 
@@ -29,6 +31,7 @@ namespace project_m
         {
             public char letter;
             public Accidental accidental;
+            public int fifths;
         }
 
         public struct TimeSignature
@@ -42,6 +45,7 @@ namespace project_m
         KeySignature key_signature = new KeySignature
         {
             letter = 'C',
+            fifths = 0,
             accidental = Accidental.Natural
         };
 

@@ -32,7 +32,7 @@ namespace project_m
 
             XmlElement key = doc.CreateElement("", "key", "");
             XmlElement fifths = doc.CreateElement("", "fifths", "");
-            XmlText fifths_text = doc.CreateTextNode(key_signature.ToString());
+            XmlText fifths_text = doc.CreateTextNode(key_signature.fifths.ToString());
             fifths.AppendChild(fifths_text);
             key.AppendChild(fifths);
             attributes.AppendChild(key);
@@ -80,7 +80,7 @@ namespace project_m
             return attributes;
         }
 
-        private XmlText Get_Type_Text(Note n)
+        private XmlText Get_Type_Text(Note n, ref bool dot)
         {
             int duration = n.duration;
             string duration_text;
@@ -93,6 +93,12 @@ namespace project_m
                 duration_text = "half";
             else
                 duration_text = "whole";
+
+            //Test to check if power of 2
+            if((duration & (duration - 1)) != 0)
+            {
+                dot = true;
+            }
 
             return doc.CreateTextNode(duration_text);
         }
@@ -126,9 +132,16 @@ namespace project_m
             voice.AppendChild(voice_text);
             note.AppendChild(voice);
 
-            XmlText type_text = Get_Type_Text(n);
+            bool dot = false;
+            XmlText type_text = Get_Type_Text(n, ref dot);
             type.AppendChild(type_text);
             note.AppendChild(type);
+
+            if(dot)
+            {
+                XmlElement dotelement = doc.CreateElement("", "dot", "");
+                note.AppendChild(dotelement);
+            }
 
             XmlText stem_text = doc.CreateTextNode("up");
             stem.AppendChild(stem_text);
@@ -141,6 +154,17 @@ namespace project_m
             return note;
         }
 
+        private XmlElement Backup_XML()
+        {
+            XmlElement backup = doc.CreateElement("", "backup", "");
+            XmlElement duration = doc.CreateElement("", "duration", "");
+            XmlText duration_text = doc.CreateTextNode((time_signature.top * time_signature.tick_divisions).ToString());
+            duration.AppendChild(duration_text);
+            backup.AppendChild(duration);
+
+            return backup;
+        }
+
         private XmlElement Generate_Measure_XML(int number)
         {
             XmlElement measure = doc.CreateElement("", "measure", "");
@@ -150,6 +174,13 @@ namespace project_m
                 measure.AppendChild(Generate_Measure_New_Attributes());
             
             foreach (Note n in Generate_Bass(number))
+            {
+                measure.AppendChild(Note_To_XML(n));
+            }
+
+            measure.AppendChild(Backup_XML());
+
+            foreach (Note n in Generate_Melody())
             {
                 measure.AppendChild(Note_To_XML(n));
             }
